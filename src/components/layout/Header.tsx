@@ -76,7 +76,7 @@ export function Header() {
 
         {/* Mobile Navigation Overlay */}
         <div className={`
-          fixed inset-0 bg-background flex flex-col justify-center items-center gap-8 transition-transform duration-300 ease-in-out md:hidden
+          fixed inset-0 bg-white z-40 flex flex-col justify-center items-center gap-8 transition-transform duration-300 ease-in-out md:hidden
           ${isMobileOpen ? "translate-x-0" : "translate-x-full"}
         `}>
           {navLinks.map((link) => (
