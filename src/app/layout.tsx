@@ -28,7 +28,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${inter.variable} ${outfit.variable} antialiased bg-background text-foreground overflow-x-hidden`}>
+      <body className={`${inter.variable} ${outfit.variable} antialiased bg-background text-foreground overflow-x-hidden relative min-h-screen`}>
+        
         <main className="pb-20 md:pb-0">
           {children}
         </main>

@@ -1,13 +1,21 @@
-import React from "react";
-import { ShieldCheck, TrendingUp, Lock } from "lucide-react";
+"use client";
+
+import React, { useState, useEffect } from "react";
+import { ShieldCheck, TrendingUp, Lock, ArrowRight } from "lucide-react";
 import { Button } from "../ui/Button";
 
 export function HeroSection() {
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [hoveredBar, setHoveredBar] = useState<number | null>(null);
+
+  useEffect(() => {
+    // Add a tiny delay so the animation is clearly visible after page paint
+    const timer = setTimeout(() => setIsLoaded(true), 100);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <section className="relative pt-28 pb-16 lg:pt-36 lg:pb-24 overflow-hidden px-6 md:px-12 max-w-7xl mx-auto min-h-[80vh] flex items-center">
-      
-      {/* Background glow effects */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-primary-500/5 rounded-full blur-[100px] -z-10"></div>
       
       <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center w-full z-10">
         
@@ -72,14 +80,48 @@ export function HeroSection() {
               </div>
             </div>
 
-            {/* Fake Chart */}
-            <div className="flex-1 rounded-xl bg-slate-50 border border-border-color relative overflow-hidden flex items-end">
-              <div className="w-full h-1/2 bg-gradient-to-t from-primary-500/20 to-transparent"></div>
-              {/* CSS simulated line chart */}
-              <svg className="absolute inset-0 w-full h-full" preserveAspectRatio="none" viewBox="0 0 100 100">
-                <path d="M0,100 C20,80 40,90 60,40 C80,-10 100,20 100,20 L100,100 Z" fill="url(#grad)" opacity="0.3"/>
-                <path d="M0,100 C20,80 40,90 60,40 C80,-10 100,20 100,20" fill="none" stroke="var(--color-primary-500)" strokeWidth="2" vectorEffect="non-scaling-stroke"/>
+            {/* Premium Bar Chart Design */}
+            <div className="flex-1 rounded-xl bg-white relative overflow-hidden flex items-end group">
+              
+              {/* Subtle background gridlines */}
+              <div className="absolute inset-0 flex flex-col justify-between pt-4 pb-2 px-0 pointer-events-none opacity-[0.10]">
+                 <div className="border-t border-dashed border-primary-900 w-full"></div>
+                 <div className="border-t border-dashed border-primary-900 w-full"></div>
+                 <div className="border-t border-dashed border-primary-900 w-full"></div>
+                 <div className="border-t border-dashed border-primary-900 w-full"></div>
+              </div>
+
+              {/* Crisp SVG Bar Chart */}
+              <svg className="absolute inset-x-2 bottom-0 w-[calc(100%-16px)] h-[85%] transition-transform duration-700 group-hover:scale-[1.02]" preserveAspectRatio="none" viewBox="0 0 100 100">
+                {/* 12 Bars for 12 months growth */}
+                {[15, 22, 18, 30, 25, 40, 35, 52, 48, 65, 60, 85].map((val, i) => (
+                  <rect 
+                    key={i} 
+                    x={i * 8.5} 
+                    y={isLoaded ? 100 - val : 100} 
+                    width="5.5" 
+                    height={isLoaded ? val : 0} 
+                    rx="1.5"
+                    fill={hoveredBar === i ? "var(--color-accent-500)" : "var(--color-primary-500)"} 
+                    onMouseEnter={() => setHoveredBar(i)}
+                    onMouseLeave={() => setHoveredBar(null)}
+                    style={{ 
+                      transition: `height 700ms ease-out ${i * 60}ms, y 700ms ease-out ${i * 60}ms, fill 150ms ease-out` 
+                    }}
+                    className="cursor-pointer"
+                  />
+                ))}
               </svg>
+
+              {/* Interactive Hover Tooltip */}
+              <div className="absolute top-[10%] right-[5%] opacity-0 group-hover:opacity-100 group-hover:-translate-y-1 transition-all duration-500 pointer-events-none z-30">
+                 <div className="bg-white/95 backdrop-blur border border-primary-100 text-foreground text-[10px] font-bold px-3 py-2 rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] flex flex-col items-center relative">
+                    <span className="text-primary-600 text-sm tracking-tight">+ ₹ 1,24,500</span>
+                    <span className="text-foreground/40 text-[9px] font-semibold uppercase mt-0.5">This Month</span>
+                    {/* Tooltip triangle */}
+                    <div className="absolute -bottom-[5px] right-3 w-2.5 h-2.5 bg-white border-b border-r border-primary-100 rotate-45"></div>
+                 </div>
+              </div>
             </div>
 
             <div className="grid grid-cols-2 gap-4">

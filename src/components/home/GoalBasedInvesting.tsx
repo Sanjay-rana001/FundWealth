@@ -30,25 +30,34 @@ export function GoalBasedInvesting() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {goals.map((goal, idx) => (
-            <div key={idx} className="bg-white border border-border-color rounded-2xl p-6 hover:-translate-y-2 hover:shadow-xl transition-all duration-300 cursor-pointer group">
-              <div className="w-12 h-12 rounded-full bg-primary-100 flex items-center justify-center mb-6 text-primary-600 group-hover:scale-110 group-hover:bg-primary-600 group-hover:text-white transition-all">
-                <goal.icon size={24} />
-              </div>
-              <h3 className="text-xl font-bold mb-4">{goal.title}</h3>
+            <div key={idx} className="relative bg-white border border-border-color rounded-2xl p-6 overflow-hidden group cursor-pointer transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 hover:border-primary-500/30">
               
-              <div className="space-y-2">
-                <div className="flex justify-between text-sm">
-                  <span className="opacity-70">Target</span>
-                  <span className="font-semibold">{goal.amount}</span>
-                </div>
-                <div className="flex justify-between text-sm">
-                  <span className="opacity-70">Timeline</span>
-                  <span className="font-semibold">{goal.time}</span>
-                </div>
-              </div>
+              {/* Subtle hover background gradient */}
+              <div className="absolute inset-0 bg-gradient-to-br from-primary-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               
-              <div className="mt-6 pt-4 border-t border-border-color text-sm font-medium text-primary-600 flex items-center justify-between group-hover:text-primary-700">
-                View Strategy <span>→</span>
+              <div className="relative z-10">
+                {/* Icon Container with animation */}
+                <div className="w-14 h-14 rounded-2xl bg-primary-50 border border-primary-100 flex items-center justify-center mb-6 text-primary-600 transition-all duration-500 group-hover:bg-primary-600 group-hover:text-white group-hover:scale-110 group-hover:rotate-6 group-hover:shadow-lg group-hover:shadow-primary-500/40">
+                  <goal.icon size={26} className="transition-transform duration-500" />
+                </div>
+                
+                <h3 className="text-xl font-display font-bold mb-5 group-hover:text-primary-700 transition-colors">{goal.title}</h3>
+                
+                <div className="space-y-3">
+                  <div className="flex justify-between items-center text-sm">
+                    <span className="text-foreground/60 font-medium">Target Amount</span>
+                    <span className="font-bold text-foreground bg-slate-50 border border-border-color px-2.5 py-1 rounded-md">{goal.amount}</span>
+                  </div>
+                  <div className="flex justify-between items-center text-sm">
+                    <span className="text-foreground/60 font-medium">Timeline</span>
+                    <span className="font-bold text-foreground bg-slate-50 border border-border-color px-2.5 py-1 rounded-md">{goal.time}</span>
+                  </div>
+                </div>
+                
+                <div className="mt-8 pt-4 border-t border-border-color text-sm font-bold text-primary-600 flex items-center justify-between group-hover:text-primary-700 transition-colors">
+                  <span>View Strategy</span> 
+                  <span className="transform translate-x-0 opacity-70 group-hover:translate-x-2 group-hover:opacity-100 transition-all duration-300">→</span>
+                </div>
               </div>
             </div>
           ))}
