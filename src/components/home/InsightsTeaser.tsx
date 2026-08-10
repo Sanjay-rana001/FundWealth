@@ -49,11 +49,11 @@ export function InsightsTeaser() {
           </Link>
         </div>
 
-        <div className="flex overflow-x-auto lg:grid lg:grid-cols-5 gap-4 lg:gap-5 pt-4 pb-8 -mx-4 px-4 lg:mx-0 lg:px-0 snap-x snap-mandatory no-scrollbar">
+        <div className="grid grid-cols-2 lg:grid-cols-5 gap-3 lg:gap-5 pt-4 pb-8">
           {blogs.map((blog, idx) => (
-            <div key={idx} className="group cursor-pointer bg-white border border-border-color rounded-xl overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col min-w-[75vw] sm:min-w-[45vw] lg:min-w-0 snap-center shrink-0">
+            <div key={idx} className="group cursor-pointer bg-white border border-border-color rounded-xl overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col">
               {/* Solid Color Header with Centered Icon */}
-              <div className={`h-24 flex items-center justify-center relative overflow-hidden border-b border-border-color/50 transition-colors duration-500 ${
+              <div className={`h-16 lg:h-24 flex items-center justify-center relative overflow-hidden border-b border-border-color/50 transition-colors duration-500 ${
                 idx % 3 === 0 ? 'bg-teal-50 group-hover:bg-teal-100' :
                 idx % 3 === 1 ? 'bg-indigo-50 group-hover:bg-indigo-100' :
                 'bg-blue-50 group-hover:bg-blue-100'
@@ -61,9 +61,9 @@ export function InsightsTeaser() {
                  
                  {/* Perfectly aligned and visible Icon */}
                  <blog.icon 
-                   size={36} 
+                   size={24} 
                    strokeWidth={2}
-                   className={`group-hover:scale-[1.2] group-hover:-translate-y-1 group-hover:rotate-3 transition-transform duration-200 ease-out ${
+                   className={`lg:w-9 lg:h-9 group-hover:scale-[1.2] group-hover:-translate-y-1 group-hover:rotate-3 transition-transform duration-200 ease-out ${
                      idx % 3 === 0 ? 'text-teal-600' :
                      idx % 3 === 1 ? 'text-indigo-600' :
                      'text-blue-600'
@@ -71,9 +71,9 @@ export function InsightsTeaser() {
                  />
               </div>
               
-              <div className="p-4 lg:p-5 flex flex-col flex-1">
-                <div className="mb-3">
-                   <span className={`inline-block px-2.5 py-1 font-bold text-[10px] tracking-wider uppercase rounded-md ${
+              <div className="p-3 lg:p-5 flex flex-col flex-1">
+                <div className="mb-2 lg:mb-3">
+                   <span className={`inline-block px-1.5 py-0.5 lg:px-2.5 lg:py-1 font-bold text-[8px] lg:text-[10px] tracking-wider uppercase rounded-md ${
                       idx % 3 === 0 ? 'bg-teal-100/50 text-teal-700' :
                       idx % 3 === 1 ? 'bg-indigo-100/50 text-indigo-700' :
                       'bg-blue-100/50 text-blue-700'
@@ -81,16 +81,16 @@ export function InsightsTeaser() {
                       {blog.category}
                     </span>
                 </div>
-                <h3 className="text-sm lg:text-base font-display font-bold mb-4 leading-snug group-hover:text-primary-600 transition-colors">
+                <h3 className="text-xs lg:text-base font-display font-bold mb-3 lg:mb-4 leading-snug group-hover:text-primary-600 transition-colors">
                   {blog.title}
                 </h3>
-                <div className="mt-auto pt-4 flex items-center justify-between border-t border-border-color/60">
-                  <div className="flex items-center gap-1.5 text-[11px] text-foreground/50 font-semibold">
-                    <Clock size={12} />
+                <div className="mt-auto pt-3 lg:pt-4 flex items-center justify-between border-t border-border-color/60">
+                  <div className="flex items-center gap-1 lg:gap-1.5 text-[9px] lg:text-[11px] text-foreground/50 font-semibold">
+                    <Clock size={10} className="lg:w-3 lg:h-3" />
                     <span>{blog.date}</span>
                   </div>
                   <div className="text-primary-600 opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all duration-300">
-                     <ArrowRight size={14} />
+                     <ArrowRight size={12} className="lg:w-[14px] lg:h-[14px]" />
                   </div>
                 </div>
               </div>

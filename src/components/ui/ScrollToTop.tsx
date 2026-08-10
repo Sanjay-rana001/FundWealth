@@ -72,13 +72,13 @@ export function ScrollToTop() {
       `}</style>
 
       <div 
-        className={`fixed bottom-8 right-8 z-50 transition-all duration-500 ${
+        className={`fixed bottom-4 right-3 md:bottom-8 md:right-8 z-50 transition-all duration-500 ${
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10 pointer-events-none"
         }`}
       >
         <button
           onClick={scrollToTop}
-          className="relative group w-14 h-14 flex items-center justify-center rounded-full bg-white/80 backdrop-blur-xl border border-white shadow-xl hover:shadow-primary-500/30 active:scale-95 transition-all duration-300 focus:outline-none"
+          className="relative group w-10 h-10 md:w-14 md:h-14 flex items-center justify-center rounded-full bg-white/90 backdrop-blur-xl border border-white shadow-md md:shadow-xl hover:shadow-primary-500/30 active:scale-95 transition-all duration-300 focus:outline-none"
           aria-label="Scroll to top"
         >
           {/* SVG Progress Ring */}
