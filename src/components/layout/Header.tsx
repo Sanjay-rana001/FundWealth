@@ -17,6 +17,14 @@ export function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    if (isMobileOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+  }, [isMobileOpen]);
+
   const navLinks = [
     { label: "Home", href: "/" },
     { label: "About", href: "#about" },
@@ -29,8 +37,8 @@ export function Header() {
   return (
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled 
-          ? "bg-white/90  backdrop-blur-lg border-b border-border-color shadow-sm py-3 md:py-4" 
+        isScrolled || isMobileOpen
+          ? "bg-white border-b border-border-color shadow-sm py-3 md:py-4" 
           : "bg-transparent py-4 md:py-6"
       }`}
     >
