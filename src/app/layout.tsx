@@ -30,7 +30,7 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <body className={`${inter.variable} ${outfit.variable} antialiased bg-background text-foreground overflow-x-hidden relative min-h-screen`}>
         
-        <main className="pb-20 md:pb-0">
+        <main className="pb-28 md:pb-0">
           {children}
         </main>
         <BottomNav />
