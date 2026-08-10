@@ -34,12 +34,14 @@ export function Testimonials() {
 
         <div className="flex md:grid md:grid-cols-3 gap-6 overflow-x-auto snap-x snap-mandatory no-scrollbar pb-4 -mx-6 px-6 md:mx-0 md:px-0 md:pb-0">
           {testimonials.map((test, idx) => (
-            <Card key={idx} glass={false} className="relative pt-12 min-w-[85vw] sm:min-w-[60vw] md:min-w-0 snap-center shrink-0">
-              <div className="absolute top-6 right-6 text-primary-200 ">
-                <Quote size={48} />
+            <Card key={idx} glass={false} className="flex flex-col justify-between min-w-[85vw] sm:min-w-[60vw] md:min-w-0 snap-center shrink-0">
+              <div>
+                <div className="text-primary-300 mb-4">
+                  <Quote size={32} fill="currentColor" className="opacity-60" />
+                </div>
+                <p className="text-foreground/80 leading-relaxed mb-8 font-medium text-lg">"{test.text}"</p>
               </div>
-              <p className="text-foreground/80 leading-relaxed mb-8 relative z-10 font-medium">"{test.text}"</p>
-              <div className="flex items-center gap-4 border-t border-border-color pt-6">
+              <div className="flex items-center gap-4 border-t border-border-color pt-6 mt-auto">
                 <div className="w-10 h-10 rounded-full overflow-hidden shrink-0 border border-border-color">
                   <img src={test.image} alt={test.author} className="w-full h-full object-cover" />
                 </div>
