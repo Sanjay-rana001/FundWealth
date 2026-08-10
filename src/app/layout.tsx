@@ -13,8 +13,8 @@ const outfit = Outfit({
 });
 
 import { ScrollToTop } from "@/components/ui/ScrollToTop";
-
 import { BottomNav } from "@/components/layout/BottomNav";
+import { SplashScreen } from "@/components/layout/SplashScreen";
 
 export const metadata: Metadata = {
   title: "FundWeALTH - Premium Wealth Management",
@@ -29,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className={`${inter.variable} ${outfit.variable} antialiased bg-background text-foreground overflow-x-hidden relative min-h-screen`}>
-        
+        <SplashScreen />
         <main className="pb-28 md:pb-0">
           {children}
         </main>
