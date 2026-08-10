@@ -38,11 +38,11 @@ export function Footer() {
           <div>
             <h4 className="font-bold mb-4">Contact</h4>
             <ul className="space-y-3 text-sm text-foreground/70">
-              <li>Level 42, Wealth Tower,</li>
-              <li>Bandra Kurla Complex,</li>
-              <li>Mumbai 400051</li>
+              <li>Achiver CP Mall,</li>
+              <li>Sainik Colony, Sector 49,</li>
+              <li>121001</li>
               <li className="pt-2"><a href="mailto:hello@fundwealth.com" className="hover:text-primary-600 transition-colors font-medium">hello@fundwealth.com</a></li>
-              <li><a href="tel:+919876543210" className="hover:text-primary-600 transition-colors font-medium">+91 98765 43210</a></li>
+              <li><a href="tel:0123456789" className="hover:text-primary-600 transition-colors font-medium">0123456789</a></li>
             </ul>
           </div>
           
