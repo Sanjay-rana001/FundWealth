@@ -14,6 +14,8 @@ const outfit = Outfit({
 
 import { ScrollToTop } from "@/components/ui/ScrollToTop";
 
+import { BottomNav } from "@/components/layout/BottomNav";
+
 export const metadata: Metadata = {
   title: "FundWeALTH - Premium Wealth Management",
   description: "Secure your financial future with FundWeALTH's premium investment and mutual fund solutions.",
@@ -27,7 +29,10 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className={`${inter.variable} ${outfit.variable} antialiased bg-background text-foreground overflow-x-hidden`}>
-        {children}
+        <main className="pb-20 md:pb-0">
+          {children}
+        </main>
+        <BottomNav />
         <ScrollToTop />
       </body>
     </html>

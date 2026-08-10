@@ -26,11 +26,11 @@ export function HeroSection() {
             Institutional-grade mutual fund portfolios and bespoke wealth strategies tailored for individuals who demand excellence.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 mb-10">
-            <Button variant="primary" className="text-base py-4 px-8 shadow-lg shadow-primary-500/20 hover:-translate-y-1 transition-transform">
+          <div className="flex flex-col sm:flex-row gap-4 mb-10 w-full">
+            <Button variant="primary" className="w-full sm:w-auto text-base py-4 px-8 shadow-lg shadow-primary-500/20 hover:-translate-y-1 transition-transform">
               Start Your Journey
             </Button>
-            <Button variant="outline" className="text-base py-4 px-8">
+            <Button variant="outline" className="w-full sm:w-auto text-base py-4 px-8">
               Explore Portfolios
             </Button>
           </div>

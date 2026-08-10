@@ -34,9 +34,9 @@ export function InsightsTeaser() {
         </Link>
       </div>
 
-      <div className="grid md:grid-cols-3 gap-8">
+      <div className="flex md:grid md:grid-cols-3 gap-6 overflow-x-auto snap-x snap-mandatory no-scrollbar pb-4 -mx-4 px-4 md:mx-0 md:px-0 md:pb-0">
         {blogs.map((blog, idx) => (
-          <Card key={idx} className="group cursor-pointer hover:shadow-2xl flex flex-col justify-between">
+          <Card key={idx} className="group cursor-pointer hover:shadow-2xl flex flex-col justify-between min-w-[85vw] sm:min-w-[60vw] md:min-w-0 snap-center shrink-0">
             <div>
               <div className="inline-block px-3 py-1 rounded-full bg-slate-100  text-xs font-semibold mb-4">
                 {blog.category}

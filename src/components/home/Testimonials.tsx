@@ -32,9 +32,9 @@ export function Testimonials() {
           <h2 className="text-3xl md:text-5xl font-display font-bold mb-6">Built on trust. <br/>Proven by results.</h2>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="flex md:grid md:grid-cols-3 gap-6 overflow-x-auto snap-x snap-mandatory no-scrollbar pb-4 -mx-6 px-6 md:mx-0 md:px-0 md:pb-0">
           {testimonials.map((test, idx) => (
-            <Card key={idx} glass={false} className="relative pt-12">
+            <Card key={idx} glass={false} className="relative pt-12 min-w-[85vw] sm:min-w-[60vw] md:min-w-0 snap-center shrink-0">
               <div className="absolute top-6 right-6 text-primary-200 ">
                 <Quote size={48} />
               </div>

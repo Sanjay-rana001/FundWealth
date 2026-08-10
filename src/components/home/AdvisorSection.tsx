@@ -21,9 +21,9 @@ export function AdvisorSection() {
           </p>
         </div>
 
-        <div className="lg:col-span-2 grid md:grid-cols-3 gap-6">
+        <div className="lg:col-span-2 flex md:grid md:grid-cols-3 gap-6 overflow-x-auto snap-x snap-mandatory no-scrollbar pb-4 -mx-4 px-4 md:mx-0 md:px-0 md:pb-0">
           {advisors.map((advisor, idx) => (
-            <div key={idx} className="group cursor-pointer">
+            <div key={idx} className="group cursor-pointer min-w-[75vw] sm:min-w-[50vw] md:min-w-0 snap-center shrink-0">
               <div className="aspect-[3/4] rounded-2xl bg-slate-200  mb-4 overflow-hidden relative border border-border-color">
                 <img src={advisor.image} alt={advisor.name} className="w-full h-full object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
