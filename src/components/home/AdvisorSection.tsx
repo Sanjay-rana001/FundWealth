@@ -3,9 +3,9 @@ import { Linkedin, Twitter } from "lucide-react";
 
 export function AdvisorSection() {
   const advisors = [
-    { name: "Aditya Sharma", role: "Chief Investment Officer", exp: "20+ Years Exp." },
-    { name: "Priya Desai", role: "Head of Wealth Planning", exp: "15+ Years Exp." },
-    { name: "Vikram Mehta", role: "Sr. Mutual Fund Analyst", exp: "12+ Years Exp." }
+    { name: "Aditya Sharma", role: "Chief Investment Officer", exp: "20+ Years Exp.", image: "/images/aditya.png" },
+    { name: "Priya Desai", role: "Head of Wealth Planning", exp: "15+ Years Exp.", image: "/images/priya.png" },
+    { name: "Vikram Mehta", role: "Sr. Mutual Fund Analyst", exp: "12+ Years Exp.", image: "/images/vikram.png" }
   ];
 
   return (
@@ -25,7 +25,7 @@ export function AdvisorSection() {
           {advisors.map((advisor, idx) => (
             <div key={idx} className="group cursor-pointer">
               <div className="aspect-[3/4] rounded-2xl bg-slate-200  mb-4 overflow-hidden relative border border-border-color">
-                {/* Abstract Avatar Placeholder */}
+                <img src={advisor.image} alt={advisor.name} className="w-full h-full object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="flex gap-3 text-white">
                     <Linkedin size={20} className="hover:text-primary-400" />

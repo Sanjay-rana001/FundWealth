@@ -29,9 +29,8 @@ export function CompanyIntro() {
         
         <div className="relative">
           <div className="aspect-square max-w-md mx-auto relative rounded-3xl overflow-hidden bg-slate-100  border border-border-color shadow-2xl">
-            {/* CSS Pattern to replace image */}
-            <div className="absolute inset-0 opacity-20" style={{ backgroundImage: 'radial-gradient(var(--color-primary-500) 2px, transparent 2px)', backgroundSize: '30px 30px' }}></div>
-            <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent"></div>
+            <img src="/images/company_intro.png" alt="Company Team" className="w-full h-full object-cover" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
             
             <div className="absolute bottom-8 left-8 right-8 bg-white/80  backdrop-blur-md p-6 rounded-xl border border-white/20">
               <p className="text-xl font-display font-bold mb-2">"Our philosophy is simple: Protect capital first, grow it second."</p>
