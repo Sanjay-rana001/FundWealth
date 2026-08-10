@@ -42,7 +42,7 @@ export function Testimonials() {
           {marqueeItems.map((test, idx) => (
             <div 
               key={idx} 
-              className="group relative w-[240px] md:w-[280px] h-[320px] md:h-[380px] rounded-2xl overflow-hidden shrink-0 shadow-md cursor-pointer"
+              className="group relative w-[200px] md:w-[220px] h-[280px] md:h-[300px] rounded-2xl overflow-hidden shrink-0 shadow-md cursor-pointer"
             >
               {/* Client Photo Background */}
               <img 
@@ -52,19 +52,19 @@ export function Testimonials() {
               />
               
               {/* Default State: Dark Gradient at bottom with Name */}
-              <div className="absolute inset-x-0 bottom-0 p-5 pt-16 bg-gradient-to-t from-black/90 via-black/50 to-transparent transition-opacity duration-300 group-hover:opacity-0">
-                <h4 className="text-white font-bold text-lg leading-tight">{test.author}</h4>
-                <p className="text-white/70 text-sm font-medium">{test.role}</p>
+              <div className="absolute inset-x-0 bottom-0 p-4 pt-12 bg-gradient-to-t from-black/90 via-black/50 to-transparent transition-opacity duration-300 group-hover:opacity-0">
+                <h4 className="text-white font-bold text-base leading-tight">{test.author}</h4>
+                <p className="text-white/70 text-xs font-medium">{test.role}</p>
               </div>
 
               {/* Cinematic Curtain: Slides up on Hover */}
-              <div className="absolute inset-0 bg-black/85 backdrop-blur-md p-6 md:p-8 flex flex-col justify-center translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out">
-                <Quote size={28} className="text-primary-500 mb-4 opacity-80" />
-                <p className="text-white/95 text-sm md:text-base leading-relaxed font-medium italic mb-6">"{test.text}"</p>
+              <div className="absolute inset-0 bg-black/85 backdrop-blur-md p-5 flex flex-col justify-center translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out">
+                <Quote size={20} className="text-primary-500 mb-2 opacity-80" />
+                <p className="text-white/95 text-xs md:text-sm leading-relaxed font-medium italic mb-4">"{test.text}"</p>
                 
-                <div className="mt-auto border-t border-white/20 pt-4">
-                   <h4 className="text-white font-bold text-sm">{test.author}</h4>
-                   <p className="text-white/60 text-xs font-medium">{test.role}</p>
+                <div className="mt-auto border-t border-white/20 pt-3">
+                   <h4 className="text-white font-bold text-xs">{test.author}</h4>
+                   <p className="text-white/60 text-[10px] font-medium leading-none mt-1">{test.role}</p>
                 </div>
               </div>
             </div>
