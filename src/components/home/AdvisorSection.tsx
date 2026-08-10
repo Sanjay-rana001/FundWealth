@@ -21,21 +21,23 @@ export function AdvisorSection() {
           </p>
         </div>
 
-        <div className="lg:col-span-2 flex md:grid md:grid-cols-3 gap-6 overflow-x-auto snap-x snap-mandatory no-scrollbar pb-4 -mx-4 px-4 md:mx-0 md:px-0 md:pb-0">
+        <div className="lg:col-span-2 flex flex-col md:grid md:grid-cols-3 gap-4 md:gap-6">
           {advisors.map((advisor, idx) => (
-            <div key={idx} className="group cursor-pointer min-w-[75vw] sm:min-w-[50vw] md:min-w-0 snap-center shrink-0">
-              <div className="aspect-[3/4] rounded-2xl bg-slate-200  mb-4 overflow-hidden relative border border-border-color">
+            <div key={idx} className="group cursor-pointer flex md:block items-center gap-4 bg-white md:bg-transparent p-3 md:p-0 rounded-2xl border border-border-color md:border-none shadow-sm md:shadow-none transition-all hover:border-primary-200">
+              <div className="w-20 h-20 md:w-full md:h-auto md:aspect-[3/4] shrink-0 rounded-xl md:rounded-2xl bg-slate-200 md:mb-4 overflow-hidden relative border border-border-color">
                 <img src={advisor.image} alt={advisor.name} className="w-full h-full object-cover" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="hidden md:flex absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent items-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="flex gap-3 text-white">
                     <Linkedin size={20} className="hover:text-primary-400" />
                     <Twitter size={20} className="hover:text-primary-400" />
                   </div>
                 </div>
               </div>
-              <h3 className="text-xl font-bold">{advisor.name}</h3>
-              <p className="text-sm text-primary-600 font-medium">{advisor.role}</p>
-              <p className="text-xs text-foreground/60 mt-1">{advisor.exp}</p>
+              <div>
+                <h3 className="text-base md:text-xl font-bold">{advisor.name}</h3>
+                <p className="text-xs md:text-sm text-primary-600 font-medium md:mt-1">{advisor.role}</p>
+                <p className="text-[10px] md:text-xs text-foreground/60 mt-0.5 md:mt-1">{advisor.exp}</p>
+              </div>
             </div>
           ))}
         </div>

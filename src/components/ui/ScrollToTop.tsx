@@ -67,7 +67,7 @@ export function ScrollToTop() {
         }
         /* Fix for hover animation not working via tailwind classes */
         .group:hover .custom-hover-bounce {
-          animation: ready-launch 0.3s ease-in-out infinite;
+          animation: ready-launch 0.5s ease-in-out infinite;
         }
       `}</style>
 
