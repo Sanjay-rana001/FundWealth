@@ -7,6 +7,7 @@ import { Menu, X } from "lucide-react";
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileOpen, setIsMobileOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -65,6 +66,33 @@ export function Header() {
           </Button>
         </div>
 
+        {/* Mobile Menu Toggle */}
+        <button 
+          className="md:hidden z-50 p-2 text-foreground"
+          onClick={() => setIsMobileOpen(!isMobileOpen)}
+        >
+          {isMobileOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
+
+        {/* Mobile Navigation Overlay */}
+        <div className={`
+          fixed inset-0 bg-background flex flex-col justify-center items-center gap-8 transition-transform duration-300 ease-in-out md:hidden
+          ${isMobileOpen ? "translate-x-0" : "translate-x-full"}
+        `}>
+          {navLinks.map((link) => (
+            <Link 
+              key={link.label} 
+              href={link.href}
+              onClick={() => setIsMobileOpen(false)}
+              className="text-2xl font-display font-bold hover:text-primary-600 transition-colors"
+            >
+              {link.label}
+            </Link>
+          ))}
+          <Button variant="primary" className="mt-8 py-3 px-8 text-lg" onClick={() => setIsMobileOpen(false)}>
+            Talk to Advisor
+          </Button>
+        </div>
 
       </div>
     </header>
