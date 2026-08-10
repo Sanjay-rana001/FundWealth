@@ -5,19 +5,19 @@ const team = [
   {
     name: "Eleanor Sterling",
     role: "Chief Executive Officer",
-    image: "https://i.pravatar.cc/300?img=47",
+    image: "/images/ceo.png",
     bio: "Former VP at Goldman Sachs, Eleanor brings 15 years of institutional investing experience to democratize wealth management.",
   },
   {
     name: "David Chen",
     role: "Chief Technology Officer",
-    image: "https://i.pravatar.cc/300?img=11",
+    image: "/images/cto.png",
     bio: "Previously engineering lead at Stripe. David architects the robust, secure algorithms powering our wealth platform.",
   },
   {
     name: "Marcus Thorne",
     role: "Head of Investment Strategy",
-    image: "https://i.pravatar.cc/300?img=33",
+    image: "/images/investment_head.png",
     bio: "Ph.D. in Financial Mathematics. Marcus oversees the quantitative models ensuring optimal portfolio performance.",
   }
 ];

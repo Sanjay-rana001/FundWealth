@@ -39,10 +39,10 @@ export function HeroSection() {
           <div className="flex items-center gap-4">
             <div className="flex -space-x-3">
               {[
-                "https://i.pravatar.cc/100?img=11", 
-                "https://i.pravatar.cc/100?img=33", 
-                "https://i.pravatar.cc/100?img=47", 
-                "https://i.pravatar.cc/100?img=12"
+                "/images/investor_1.png", 
+                "/images/investor_2.png", 
+                "/images/investor_3.png", 
+                "/images/investor_4.png"
               ].map((imgUrl, i) => (
                 <div key={i} className="w-8 h-8 rounded-full border-2 border-background bg-slate-200 flex items-center justify-center overflow-hidden shrink-0">
                   <img src={imgUrl} alt="Investor" className="w-full h-full object-cover" />

@@ -7,17 +7,20 @@ export function Testimonials() {
     {
       text: "FundWeALTH completely restructured my haphazard investments into a streamlined, high-performing portfolio. Their transparency is unmatched.",
       author: "Rajeev K.",
-      role: "Tech Executive"
+      role: "Tech Executive",
+      image: "/images/investor_1.png"
     },
     {
       text: "I was skeptical about goal-based investing until I saw their roadmap for my daughter's education. We hit the corpus 2 years ahead of schedule.",
       author: "Sneha M.",
-      role: "Surgeon"
+      role: "Surgeon",
+      image: "/images/investor_2.png"
     },
     {
       text: "Their active rebalancing saved my portfolio during the market correction. Highly recommend their wealth advisory services.",
       author: "Amit B.",
-      role: "Business Owner"
+      role: "Business Owner",
+      image: "/images/investor_3.png"
     }
   ];
 
@@ -37,7 +40,9 @@ export function Testimonials() {
               </div>
               <p className="text-foreground/80 leading-relaxed mb-8 relative z-10 font-medium">"{test.text}"</p>
               <div className="flex items-center gap-4 border-t border-border-color pt-6">
-                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary-400 to-accent-400"></div>
+                <div className="w-10 h-10 rounded-full overflow-hidden shrink-0 border border-border-color">
+                  <img src={test.image} alt={test.author} className="w-full h-full object-cover" />
+                </div>
                 <div>
                   <h4 className="font-bold text-sm">{test.author}</h4>
                   <p className="text-xs text-foreground/60">{test.role}</p>
