@@ -101,17 +101,21 @@ export function PortfolioIllustration() {
                     stroke={item.color} 
                     pathLength="100"
                     strokeDashoffset={item.offset}
-                    className={`transition-all duration-500 ease-out cursor-pointer outline-none`}
-                    strokeWidth={12}
-                    style={{
-                      opacity: isFaded ? 0.2 : 1,
-                      filter: isActive ? `drop-shadow(0px 0px 6px ${item.color}60)` : "none",
-                      transform: isActive ? `translate(${item.tx}px, ${item.ty}px)` : "translate(0px, 0px)",
-                    }}
+                    className="cursor-pointer outline-none"
                     initial={{ strokeDasharray: "0 100" }}
                     whileInView={{ strokeDasharray: `${item.length} 100` }}
                     viewport={{ once: true }}
-                    transition={{ duration: 1.5, delay: 0.2 + (index * 0.1), ease: "easeOut" }}
+                    animate={{
+                      strokeWidth: isActive ? 16 : 12,
+                      opacity: isFaded ? 0.2 : 1,
+                      x: isActive ? item.tx : 0,
+                      y: isActive ? item.ty : 0,
+                      filter: isActive ? `drop-shadow(0px 0px 6px ${item.color}60)` : "drop-shadow(0px 0px 0px rgba(0,0,0,0))"
+                    }}
+                    transition={{ 
+                      strokeDasharray: { duration: 1.5, delay: 0.2 + (index * 0.1), ease: "easeOut" },
+                      default: { duration: 0.3, type: "tween", ease: "easeOut" }
+                    }}
                     onMouseEnter={() => setActiveIndex(index)}
                     onMouseLeave={() => setActiveIndex(null)}
                     onTouchStart={() => setActiveIndex(index)}
