@@ -18,17 +18,17 @@ export function PortfolioIllustration() {
             <div className="absolute bottom-0 left-0 w-full h-1/2 border-[15px] border-accent-500 rounded-b-full -my-[15px]"></div>
           </div>
           
-          <div className="absolute inset-0 flex items-center justify-center flex-col">
-            <span className="text-sm text-foreground/60 uppercase tracking-widest font-medium">Expected Alpha</span>
-            <span className="text-5xl font-display font-bold text-primary-600">+4.5%</span>
+          <div className="absolute inset-0 flex items-center justify-center flex-col z-10">
+            <span className="text-[10px] md:text-sm text-foreground/60 uppercase tracking-widest font-medium">Expected Alpha</span>
+            <span className="text-3xl md:text-5xl font-display font-bold text-primary-600">+4.5%</span>
           </div>
           
           {/* Legend floating cards */}
-          <div className="absolute -right-4 top-1/4 bg-white shadow-xl px-4 py-2 rounded-lg border border-border-color text-sm">
-            <div className="flex items-center gap-2"><div className="w-3 h-3 bg-primary-500 rounded-full"></div> Large Cap Equity (50%)</div>
+          <div className="absolute -right-2 md:-right-4 top-1/4 bg-white/90 backdrop-blur shadow-xl px-2.5 py-1.5 md:px-4 md:py-2 rounded-lg border border-border-color text-[10px] md:text-sm z-20 max-w-[110px] md:max-w-none text-center">
+            <div className="flex items-center justify-center gap-1.5 md:gap-2"><div className="w-2 h-2 md:w-3 md:h-3 bg-primary-500 rounded-full shrink-0"></div> <span className="leading-tight">Large Cap Equity (50%)</span></div>
           </div>
-          <div className="absolute -left-4 bottom-1/4 bg-white shadow-xl px-4 py-2 rounded-lg border border-border-color text-sm">
-            <div className="flex items-center gap-2"><div className="w-3 h-3 bg-accent-500 rounded-full"></div> Debt & Bonds (30%)</div>
+          <div className="absolute -left-2 md:-left-4 bottom-1/4 bg-white/90 backdrop-blur shadow-xl px-2.5 py-1.5 md:px-4 md:py-2 rounded-lg border border-border-color text-[10px] md:text-sm z-20 max-w-[110px] md:max-w-none text-center">
+            <div className="flex items-center justify-center gap-1.5 md:gap-2"><div className="w-2 h-2 md:w-3 md:h-3 bg-accent-500 rounded-full shrink-0"></div> <span className="leading-tight">Debt & Bonds (30%)</span></div>
           </div>
         </div>
         
