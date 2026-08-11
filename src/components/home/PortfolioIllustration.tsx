@@ -99,8 +99,10 @@ export function PortfolioIllustration() {
                     className={`transition-all duration-500 ease-out cursor-pointer outline-none`}
                     strokeWidth={isActive ? 16 : 12}
                     style={{
-                      opacity: isFaded ? 0.2 : 0.9,
-                      filter: isActive ? `drop-shadow(0px 0px 6px ${item.color}60)` : "none"
+                      opacity: isFaded ? 0.2 : 1,
+                      filter: isActive ? `drop-shadow(0px 0px 6px ${item.color}60)` : "none",
+                      transform: isActive ? "scale(1.08)" : "scale(1)",
+                      transformOrigin: "50px 50px"
                     }}
                     initial={{ strokeDasharray: "0 100" }}
                     whileInView={{ strokeDasharray: `${item.length} 100` }}
