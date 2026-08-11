@@ -107,7 +107,7 @@ export function PortfolioIllustration() {
                     viewport={{ once: true }}
                     animate={{
                       strokeWidth: isActive ? 16 : 12,
-                      opacity: isFaded ? 0.2 : 1,
+                      opacity: 1, // Keep all colors bright and solid
                       x: isActive ? item.tx : 0,
                       y: isActive ? item.ty : 0,
                       filter: isActive ? `drop-shadow(0px 0px 6px ${item.color}60)` : "drop-shadow(0px 0px 0px rgba(0,0,0,0))"
@@ -157,13 +157,11 @@ export function PortfolioIllustration() {
           <div className="space-y-0.5">
             {portfolioData.map((item, index) => {
               const isActive = activeIndex === index;
-              const isFaded = activeIndex !== null && activeIndex !== index;
               
               return (
                 <motion.div 
                   key={item.id}
                   className={`relative p-2 md:p-3 rounded-lg cursor-pointer transition-all duration-300 overflow-hidden ${isActive ? 'bg-gray-50 shadow-sm' : 'hover:bg-gray-50/50'}`}
-                  style={{ opacity: isFaded ? 0.5 : 1 }}
                   onMouseEnter={() => setActiveIndex(index)}
                   onMouseLeave={() => setActiveIndex(null)}
                   onTouchStart={() => setActiveIndex(index)}
@@ -173,7 +171,7 @@ export function PortfolioIllustration() {
                   transition={{ duration: 0.5, delay: 0.4 + (index * 0.1) }}
                 >
                   {/* Left accent border */}
-                  <div className={`absolute left-0 top-0 bottom-0 w-1 rounded-l-lg transition-all duration-300 ${item.bgClassName} ${isActive ? 'opacity-100' : 'opacity-40'}`}></div>
+                  <div className={`absolute left-0 top-0 bottom-0 w-1 rounded-l-lg transition-all duration-300 ${item.bgClassName} ${isActive ? 'opacity-100' : 'opacity-0'}`}></div>
                   
                   <div className="pl-3 md:pl-4">
                     <div className="flex items-center gap-1.5 mb-0.5">
