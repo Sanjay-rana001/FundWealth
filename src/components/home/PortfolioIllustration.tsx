@@ -65,15 +65,15 @@ export function PortfolioIllustration() {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   return (
-    <section className="bg-white text-foreground py-20 md:py-28 border-y border-border-color relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
+    <section className="bg-white text-foreground py-14 md:py-20 border-y border-border-color relative overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 grid lg:grid-cols-2 gap-10 lg:gap-12 items-center">
         
         {/* Interactive Data Visualization */}
-        <div className="relative aspect-square max-w-[320px] md:max-w-md mx-auto w-full flex items-center justify-center group">
+        <div className="relative aspect-square max-w-[240px] md:max-w-[320px] mx-auto w-full flex items-center justify-center group">
           
           {/* Subtle static background circles instead of heavy animated ones */}
-          <div className="absolute inset-4 md:inset-8 rounded-full border border-gray-100/50 bg-gray-50/50"></div>
-          <div className="absolute inset-10 md:inset-14 rounded-full border border-gray-100/50 bg-gray-50/50"></div>
+          <div className="absolute inset-4 md:inset-6 rounded-full border border-gray-100/50 bg-gray-50/50"></div>
+          <div className="absolute inset-8 md:inset-12 rounded-full border border-gray-100/50 bg-gray-50/50"></div>
 
           {/* Clean SVG Donut Chart */}
           <motion.div 
@@ -97,10 +97,10 @@ export function PortfolioIllustration() {
                     pathLength="100"
                     strokeDashoffset={item.offset}
                     className={`transition-all duration-500 ease-out cursor-pointer outline-none`}
-                    strokeWidth={isActive ? 20 : 16}
+                    strokeWidth={isActive ? 16 : 12}
                     style={{
                       opacity: isFaded ? 0.2 : 0.9,
-                      filter: isActive ? `drop-shadow(0px 0px 8px ${item.color}60)` : "none"
+                      filter: isActive ? `drop-shadow(0px 0px 6px ${item.color}60)` : "none"
                     }}
                     initial={{ strokeDasharray: "0 100" }}
                     whileInView={{ strokeDasharray: `${item.length} 100` }}
@@ -122,8 +122,8 @@ export function PortfolioIllustration() {
               viewport={{ once: true }}
               transition={{ delay: 0.8, type: "spring", bounce: 0.5 }}
             >
-              <span className="text-[10px] md:text-sm text-foreground/50 uppercase tracking-widest font-semibold mb-1">Expected Alpha</span>
-              <span className="text-4xl md:text-6xl font-display font-bold text-gray-900 tracking-tight">+5.2%</span>
+              <span className="text-[9px] md:text-xs text-foreground/50 uppercase tracking-widest font-semibold mb-0.5">Expected Alpha</span>
+              <span className="text-3xl md:text-4xl font-display font-bold text-gray-900 tracking-tight">+5.2%</span>
             </motion.div>
           </motion.div>
         </div>
@@ -136,10 +136,10 @@ export function PortfolioIllustration() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl md:text-5xl font-display font-bold leading-tight mb-4 md:mb-6">
+            <h2 className="text-2xl md:text-4xl font-display font-bold leading-tight mb-3 md:mb-4">
               Institutional-grade <br />asset allocation.
             </h2>
-            <p className="text-base md:text-lg text-foreground/70 mb-8 md:mb-10 max-w-lg">
+            <p className="text-sm md:text-base text-foreground/70 mb-6 md:mb-8 max-w-lg">
               Hover over the portfolio allocations below to see how our proprietary 5-factor dynamic model ensures your wealth grows steadily while protecting downside risk.
             </p>
           </motion.div>
@@ -152,7 +152,7 @@ export function PortfolioIllustration() {
               return (
                 <motion.div 
                   key={item.id}
-                  className={`relative p-4 md:p-5 rounded-2xl cursor-pointer transition-all duration-300 overflow-hidden ${isActive ? 'bg-gray-50 shadow-sm' : 'hover:bg-gray-50/50'}`}
+                  className={`relative p-3 md:p-4 rounded-xl cursor-pointer transition-all duration-300 overflow-hidden ${isActive ? 'bg-gray-50 shadow-sm' : 'hover:bg-gray-50/50'}`}
                   style={{ opacity: isFaded ? 0.5 : 1 }}
                   onMouseEnter={() => setActiveIndex(index)}
                   onMouseLeave={() => setActiveIndex(null)}
@@ -163,14 +163,14 @@ export function PortfolioIllustration() {
                   transition={{ duration: 0.5, delay: 0.4 + (index * 0.1) }}
                 >
                   {/* Left accent border */}
-                  <div className={`absolute left-0 top-0 bottom-0 w-1.5 rounded-l-2xl transition-all duration-300 ${item.bgClassName} ${isActive ? 'opacity-100' : 'opacity-40'}`}></div>
+                  <div className={`absolute left-0 top-0 bottom-0 w-1 rounded-l-xl transition-all duration-300 ${item.bgClassName} ${isActive ? 'opacity-100' : 'opacity-40'}`}></div>
                   
-                  <div className="pl-4 md:pl-6">
-                    <div className="flex items-center gap-2 mb-1.5">
-                      <div className={`w-2.5 h-2.5 rounded-full ${item.bgClassName} ${isActive ? 'scale-125' : ''} transition-transform duration-300`}></div>
-                      <h4 className="text-base md:text-lg font-bold text-gray-900">{item.title}</h4>
+                  <div className="pl-3 md:pl-5">
+                    <div className="flex items-center gap-1.5 mb-1">
+                      <div className={`w-2 h-2 rounded-full ${item.bgClassName} ${isActive ? 'scale-125' : ''} transition-transform duration-300`}></div>
+                      <h4 className="text-sm md:text-base font-bold text-gray-900">{item.title}</h4>
                     </div>
-                    <p className="text-foreground/60 text-sm md:text-base leading-relaxed">{item.desc}</p>
+                    <p className="text-foreground/60 text-xs md:text-sm leading-relaxed">{item.desc}</p>
                   </div>
                 </motion.div>
               );
