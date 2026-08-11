@@ -157,11 +157,13 @@ export function PortfolioIllustration() {
           <div className="space-y-0.5">
             {portfolioData.map((item, index) => {
               const isActive = activeIndex === index;
+              const isFaded = activeIndex !== null && activeIndex !== index;
               
               return (
                 <motion.div 
                   key={item.id}
                   className={`relative p-2 md:p-3 rounded-lg cursor-pointer transition-all duration-300 overflow-hidden ${isActive ? 'bg-gray-50 shadow-sm' : 'hover:bg-gray-50/50'}`}
+                  style={{ opacity: isFaded ? 0.5 : 1 }}
                   onMouseEnter={() => setActiveIndex(index)}
                   onMouseLeave={() => setActiveIndex(null)}
                   onTouchStart={() => setActiveIndex(index)}
