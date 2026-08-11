@@ -65,11 +65,11 @@ export function PortfolioIllustration() {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   return (
-    <section className="bg-white text-foreground py-10 md:py-14 border-y border-border-color relative overflow-hidden">
+    <section className="bg-white text-foreground py-4 md:py-10 border-y border-border-color relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 md:px-12 grid lg:grid-cols-2 gap-6 lg:gap-8 items-center">
         
         {/* Interactive Data Visualization */}
-        <div className="relative aspect-square max-w-[200px] md:max-w-[280px] mx-auto w-full flex items-center justify-center group">
+        <div className="relative aspect-square max-w-[240px] md:max-w-[340px] mx-auto w-full flex items-center justify-center group">
           
           {/* Subtle static background circles instead of heavy animated ones */}
           <div className="absolute inset-4 md:inset-6 rounded-full border border-gray-100/50 bg-gray-50/50"></div>
@@ -122,8 +122,8 @@ export function PortfolioIllustration() {
               viewport={{ once: true }}
               transition={{ delay: 0.8, type: "spring", bounce: 0.5 }}
             >
-              <span className="text-[8px] md:text-[10px] text-foreground/50 uppercase tracking-widest font-semibold mb-0.5">Expected Alpha</span>
-              <span className="text-2xl md:text-3xl font-display font-bold text-gray-900 tracking-tight">+5.2%</span>
+              <span className="text-[10px] md:text-xs text-foreground/50 uppercase tracking-widest font-semibold mb-0.5">Expected Alpha</span>
+              <span className="text-3xl md:text-4xl font-display font-bold text-gray-900 tracking-tight">+5.2%</span>
             </motion.div>
           </motion.div>
         </div>
