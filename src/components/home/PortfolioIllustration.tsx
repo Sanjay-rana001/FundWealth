@@ -65,11 +65,11 @@ export function PortfolioIllustration() {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   return (
-    <section className="bg-white text-foreground py-14 md:py-20 border-y border-border-color relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 grid lg:grid-cols-2 gap-10 lg:gap-12 items-center">
+    <section className="bg-white text-foreground py-10 md:py-14 border-y border-border-color relative overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 grid lg:grid-cols-2 gap-6 lg:gap-8 items-center">
         
         {/* Interactive Data Visualization */}
-        <div className="relative aspect-square max-w-[240px] md:max-w-[320px] mx-auto w-full flex items-center justify-center group">
+        <div className="relative aspect-square max-w-[200px] md:max-w-[280px] mx-auto w-full flex items-center justify-center group">
           
           {/* Subtle static background circles instead of heavy animated ones */}
           <div className="absolute inset-4 md:inset-6 rounded-full border border-gray-100/50 bg-gray-50/50"></div>
@@ -122,8 +122,8 @@ export function PortfolioIllustration() {
               viewport={{ once: true }}
               transition={{ delay: 0.8, type: "spring", bounce: 0.5 }}
             >
-              <span className="text-[9px] md:text-xs text-foreground/50 uppercase tracking-widest font-semibold mb-0.5">Expected Alpha</span>
-              <span className="text-3xl md:text-4xl font-display font-bold text-gray-900 tracking-tight">+5.2%</span>
+              <span className="text-[8px] md:text-[10px] text-foreground/50 uppercase tracking-widest font-semibold mb-0.5">Expected Alpha</span>
+              <span className="text-2xl md:text-3xl font-display font-bold text-gray-900 tracking-tight">+5.2%</span>
             </motion.div>
           </motion.div>
         </div>
@@ -136,15 +136,15 @@ export function PortfolioIllustration() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-2xl md:text-4xl font-display font-bold leading-tight mb-3 md:mb-4">
-              Institutional-grade <br />asset allocation.
+            <h2 className="text-xl md:text-3xl font-display font-bold leading-tight mb-2 md:mb-3">
+              Institutional-grade asset allocation.
             </h2>
-            <p className="text-sm md:text-base text-foreground/70 mb-6 md:mb-8 max-w-lg">
+            <p className="text-xs md:text-sm text-foreground/70 mb-4 md:mb-6 max-w-lg">
               Hover over the portfolio allocations below to see how our proprietary 5-factor dynamic model ensures your wealth grows steadily while protecting downside risk.
             </p>
           </motion.div>
           
-          <div className="space-y-1">
+          <div className="space-y-0.5">
             {portfolioData.map((item, index) => {
               const isActive = activeIndex === index;
               const isFaded = activeIndex !== null && activeIndex !== index;
@@ -152,7 +152,7 @@ export function PortfolioIllustration() {
               return (
                 <motion.div 
                   key={item.id}
-                  className={`relative p-3 md:p-4 rounded-xl cursor-pointer transition-all duration-300 overflow-hidden ${isActive ? 'bg-gray-50 shadow-sm' : 'hover:bg-gray-50/50'}`}
+                  className={`relative p-2 md:p-3 rounded-lg cursor-pointer transition-all duration-300 overflow-hidden ${isActive ? 'bg-gray-50 shadow-sm' : 'hover:bg-gray-50/50'}`}
                   style={{ opacity: isFaded ? 0.5 : 1 }}
                   onMouseEnter={() => setActiveIndex(index)}
                   onMouseLeave={() => setActiveIndex(null)}
@@ -163,14 +163,14 @@ export function PortfolioIllustration() {
                   transition={{ duration: 0.5, delay: 0.4 + (index * 0.1) }}
                 >
                   {/* Left accent border */}
-                  <div className={`absolute left-0 top-0 bottom-0 w-1 rounded-l-xl transition-all duration-300 ${item.bgClassName} ${isActive ? 'opacity-100' : 'opacity-40'}`}></div>
+                  <div className={`absolute left-0 top-0 bottom-0 w-1 rounded-l-lg transition-all duration-300 ${item.bgClassName} ${isActive ? 'opacity-100' : 'opacity-40'}`}></div>
                   
-                  <div className="pl-3 md:pl-5">
-                    <div className="flex items-center gap-1.5 mb-1">
-                      <div className={`w-2 h-2 rounded-full ${item.bgClassName} ${isActive ? 'scale-125' : ''} transition-transform duration-300`}></div>
-                      <h4 className="text-sm md:text-base font-bold text-gray-900">{item.title}</h4>
+                  <div className="pl-3 md:pl-4">
+                    <div className="flex items-center gap-1.5 mb-0.5">
+                      <div className={`w-1.5 h-1.5 rounded-full ${item.bgClassName} ${isActive ? 'scale-125' : ''} transition-transform duration-300`}></div>
+                      <h4 className="text-xs md:text-sm font-bold text-gray-900">{item.title}</h4>
                     </div>
-                    <p className="text-foreground/60 text-xs md:text-sm leading-relaxed">{item.desc}</p>
+                    <p className="text-foreground/60 text-[10px] md:text-xs leading-relaxed">{item.desc}</p>
                   </div>
                 </motion.div>
               );
