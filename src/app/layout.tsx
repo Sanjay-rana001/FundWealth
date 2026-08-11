@@ -27,8 +27,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <body className={`${inter.variable} ${outfit.variable} antialiased bg-background text-foreground overflow-x-hidden relative min-h-screen`}>
+    <html lang="en" className={`scroll-smooth ${inter.variable} ${outfit.variable}`}>
+      <body className="antialiased bg-background text-foreground overflow-x-hidden relative min-h-screen">
         <SplashScreen />
         <main className="pb-28 md:pb-0">
           {children}
