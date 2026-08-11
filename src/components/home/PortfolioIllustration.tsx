@@ -14,7 +14,7 @@ export function PortfolioIllustration() {
               {/* Debt & Bonds (30%) - Yellow/Accent */}
               <circle cx="50" cy="50" r="40" fill="transparent" stroke="#f59e0b" strokeWidth="16" strokeDasharray="251.2" strokeDashoffset="75.36" className="opacity-90" />
               {/* Gold (20%) - Blue */}
-              <circle cx="50" cy="50" r="40" fill="transparent" stroke="#3b82f6" strokeWidth="16" strokeDasharray="251.2" strokeDashoffset="150.72" strokeDasharray="50.24 200.96" className="opacity-90" transform="rotate(108 50 50)" />
+              <circle cx="50" cy="50" r="40" fill="transparent" stroke="#3b82f6" strokeWidth="16" strokeDashoffset="150.72" strokeDasharray="50.24 200.96" className="opacity-90" transform="rotate(108 50 50)" />
               {/* Large Cap Equity (50%) - Green/Primary */}
               <circle cx="50" cy="50" r="40" fill="transparent" stroke="#10b981" strokeWidth="16" strokeDasharray="251.2" strokeDashoffset="125.6" className="opacity-90" transform="rotate(180 50 50)" />
             </svg>
