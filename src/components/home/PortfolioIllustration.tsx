@@ -67,7 +67,8 @@ const portfolioData = [
 ];
 
 export function PortfolioIllustration() {
-  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const [activeChartIndex, setActiveChartIndex] = useState<number | null>(null);
+  const [activeTextIndex, setActiveTextIndex] = useState<number | null>(null);
 
   return (
     <section className="bg-white text-foreground py-4 md:py-8 border-y border-border-color relative overflow-hidden">
@@ -90,8 +91,7 @@ export function PortfolioIllustration() {
           >
             <svg viewBox="0 0 100 100" className="w-full h-full overflow-visible">
               {portfolioData.map((item, index) => {
-                const isActive = activeIndex === index;
-                const isFaded = activeIndex !== null && activeIndex !== index;
+                const isActive = activeChartIndex === index;
                 
                 return (
                   <motion.circle 
@@ -116,9 +116,9 @@ export function PortfolioIllustration() {
                       strokeDasharray: { duration: 1.5, delay: 0.2 + (index * 0.1), ease: "easeOut" },
                       default: { duration: 0.3, type: "tween", ease: "easeOut" }
                     }}
-                    onMouseEnter={() => setActiveIndex(index)}
-                    onMouseLeave={() => setActiveIndex(null)}
-                    onTouchStart={() => setActiveIndex(index)}
+                    onMouseEnter={() => setActiveChartIndex(index)}
+                    onMouseLeave={() => setActiveChartIndex(null)}
+                    onTouchStart={() => setActiveChartIndex(index)}
                   />
                 );
               })}
@@ -150,21 +150,21 @@ export function PortfolioIllustration() {
               Institutional-grade asset allocation.
             </h2>
             <p className="text-xs md:text-sm text-foreground/70 mb-4 md:mb-6 max-w-lg">
-              Hover over the portfolio allocations below to see how our proprietary 5-factor dynamic model ensures your wealth grows steadily while protecting downside risk.
+              Our proprietary 5-factor dynamic model ensures your wealth grows steadily while protecting downside risk.
             </p>
           </motion.div>
           
           <div className="space-y-0.5">
             {portfolioData.map((item, index) => {
-              const isActive = activeIndex === index;
+              const isActive = activeTextIndex === index;
               
               return (
                 <motion.div 
                   key={item.id}
                   className={`relative p-2 md:p-3 rounded-lg cursor-pointer transition-all duration-300 overflow-hidden ${isActive ? 'bg-gray-50 shadow-sm' : 'hover:bg-gray-50/50'}`}
-                  onMouseEnter={() => setActiveIndex(index)}
-                  onMouseLeave={() => setActiveIndex(null)}
-                  onTouchStart={() => setActiveIndex(index)}
+                  onMouseEnter={() => setActiveTextIndex(index)}
+                  onMouseLeave={() => setActiveTextIndex(null)}
+                  onTouchStart={() => setActiveTextIndex(index)}
                   initial={{ opacity: 0, x: 20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
