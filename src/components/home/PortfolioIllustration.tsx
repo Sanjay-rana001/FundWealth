@@ -14,6 +14,7 @@ const portfolioData = [
     borderClassName: "border-primary-500",
     length: 35,
     offset: 0,
+    tx: 1.82, ty: 3.56
   },
   {
     id: "mid-cap",
@@ -25,6 +26,7 @@ const portfolioData = [
     borderClassName: "border-cyan-500",
     length: 15,
     offset: -35,
+    tx: -3.56, ty: 1.82
   },
   {
     id: "debt",
@@ -36,6 +38,7 @@ const portfolioData = [
     borderClassName: "border-accent-500",
     length: 25,
     offset: -50,
+    tx: -2.83, ty: -2.83
   },
   {
     id: "gold",
@@ -47,6 +50,7 @@ const portfolioData = [
     borderClassName: "border-blue-500",
     length: 10,
     offset: -75,
+    tx: 1.24, ty: -3.80
   },
   {
     id: "alts",
@@ -58,6 +62,7 @@ const portfolioData = [
     borderClassName: "border-purple-500",
     length: 15,
     offset: -85,
+    tx: 3.56, ty: -1.82
   },
 ];
 
@@ -65,11 +70,11 @@ export function PortfolioIllustration() {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   return (
-    <section className="bg-white text-foreground py-4 md:py-10 border-y border-border-color relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 grid lg:grid-cols-2 gap-6 lg:gap-8 items-center">
+    <section className="bg-white text-foreground py-4 md:py-8 border-y border-border-color relative overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 grid lg:grid-cols-2 gap-4 lg:gap-6 items-center">
         
         {/* Interactive Data Visualization */}
-        <div className="relative aspect-square max-w-[240px] md:max-w-[340px] mx-auto w-full flex items-center justify-center group">
+        <div className="relative aspect-square max-w-[260px] md:max-w-[380px] mx-auto w-full flex items-center justify-center group">
           
           {/* Subtle static background circles instead of heavy animated ones */}
           <div className="absolute inset-4 md:inset-6 rounded-full border border-gray-100/50 bg-gray-50/50"></div>
@@ -97,12 +102,11 @@ export function PortfolioIllustration() {
                     pathLength="100"
                     strokeDashoffset={item.offset}
                     className={`transition-all duration-500 ease-out cursor-pointer outline-none`}
-                    strokeWidth={isActive ? 16 : 12}
+                    strokeWidth={12}
                     style={{
                       opacity: isFaded ? 0.2 : 1,
                       filter: isActive ? `drop-shadow(0px 0px 6px ${item.color}60)` : "none",
-                      transform: isActive ? "scale(1.08)" : "scale(1)",
-                      transformOrigin: "50px 50px"
+                      transform: isActive ? `translate(${item.tx}px, ${item.ty}px)` : "translate(0px, 0px)",
                     }}
                     initial={{ strokeDasharray: "0 100" }}
                     whileInView={{ strokeDasharray: `${item.length} 100` }}
@@ -125,7 +129,7 @@ export function PortfolioIllustration() {
               transition={{ delay: 0.8, type: "spring", bounce: 0.5 }}
             >
               <span className="text-[10px] md:text-xs text-foreground/50 uppercase tracking-widest font-semibold mb-0.5">Expected Alpha</span>
-              <span className="text-3xl md:text-4xl font-display font-bold text-gray-900 tracking-tight">+5.2%</span>
+              <span className="text-3xl md:text-5xl font-display font-bold text-gray-900 tracking-tight">+5.2%</span>
             </motion.div>
           </motion.div>
         </div>
