@@ -107,7 +107,7 @@ export function ScrollToTop() {
           </svg>
 
           {/* Mouse Outline Container with Arrows Inside */}
-          <div className={`relative z-10 w-5 h-8 rounded-full border-2 flex items-center justify-center overflow-hidden transition-colors duration-300 ${
+          <div className={`relative z-10 w-3 h-5 md:w-5 md:h-8 rounded-full border-[1.5px] md:border-2 flex items-center justify-center overflow-hidden transition-colors duration-300 ${
             isScrolling ? "border-primary-600" : "border-slate-800 group-hover:border-primary-600"
           }`}>
             
@@ -115,7 +115,7 @@ export function ScrollToTop() {
             <ArrowUp 
               size={12} 
               strokeWidth={3} 
-              className={`absolute transition-all duration-200 custom-hover-bounce ${
+              className={`absolute w-2 h-2 md:w-3 md:h-3 transition-all duration-200 custom-hover-bounce ${
                 isScrolling 
                   ? "opacity-0" 
                   : "text-slate-800 group-hover:text-primary-600"
@@ -126,7 +126,7 @@ export function ScrollToTop() {
             <ArrowUp 
               size={12} 
               strokeWidth={3} 
-              className={`absolute text-primary-600 opacity-0 ${
+              className={`absolute w-2 h-2 md:w-3 md:h-3 text-primary-600 opacity-0 ${
                 isScrolling ? "animate-shoot" : ""
               }`} 
             />
@@ -135,7 +135,7 @@ export function ScrollToTop() {
             <ArrowUp 
               size={12} 
               strokeWidth={3} 
-              className={`absolute text-primary-600 opacity-0 ${
+              className={`absolute w-2 h-2 md:w-3 md:h-3 text-primary-600 opacity-0 ${
                 isScrolling ? "animate-shoot-delayed" : ""
               }`} 
             />

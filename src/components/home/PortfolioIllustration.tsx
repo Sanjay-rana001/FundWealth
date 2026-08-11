@@ -8,19 +8,19 @@ export function PortfolioIllustration() {
         {/* Abstract Data Visualization */}
         <div className="relative aspect-square max-w-md mx-auto w-full">
           {/* Outer ring */}
-          <div className="absolute inset-4 rounded-full border border-primary-200 border-dashed animate-[spin_60s_linear_infinite]"></div>
+          <div className="absolute inset-2 md:inset-4 rounded-full border border-primary-200 border-dashed animate-[spin_60s_linear_infinite]"></div>
           {/* Middle ring */}
-          <div className="absolute inset-12 rounded-full border-[20px] border-primary-50">
-            <div className="absolute top-0 right-0 w-1/2 h-full border-[20px] border-primary-500 rounded-r-full -mx-[20px]"></div>
+          <div className="absolute inset-6 md:inset-12 rounded-full border-[8px] md:border-[20px] border-primary-50">
+            <div className="absolute top-0 right-0 w-1/2 h-full border-[8px] md:border-[20px] border-primary-500 rounded-r-full -mx-[8px] md:-mx-[20px]"></div>
           </div>
           {/* Inner ring */}
-          <div className="absolute inset-24 rounded-full border-[15px] border-accent-50">
-            <div className="absolute bottom-0 left-0 w-full h-1/2 border-[15px] border-accent-500 rounded-b-full -my-[15px]"></div>
+          <div className="absolute inset-12 md:inset-24 rounded-full border-[6px] md:border-[15px] border-accent-50">
+            <div className="absolute bottom-0 left-0 w-full h-1/2 border-[6px] md:border-[15px] border-accent-500 rounded-b-full -my-[6px] md:-my-[15px]"></div>
           </div>
           
           <div className="absolute inset-0 flex items-center justify-center flex-col z-10">
             <span className="text-[10px] md:text-sm text-foreground/60 uppercase tracking-widest font-medium">Expected Alpha</span>
-            <span className="text-3xl md:text-5xl font-display font-bold text-primary-600">+4.5%</span>
+            <span className="text-2xl md:text-5xl font-display font-bold text-primary-600">+4.5%</span>
           </div>
           
           {/* Legend floating cards */}
