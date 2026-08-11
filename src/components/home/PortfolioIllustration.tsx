@@ -100,8 +100,7 @@ export function PortfolioIllustration() {
                     stroke={item.color} 
                     pathLength="100"
                     strokeDashoffset={item.offset}
-                    className="cursor-pointer outline-none pointer-events-auto"
-                    style={{ pointerEvents: 'stroke' }}
+                    className="cursor-pointer outline-none"
                     initial={{ strokeDasharray: "0 100" }}
                     whileInView={{ strokeDasharray: `${item.length} 100` }}
                     viewport={{ once: true }}
