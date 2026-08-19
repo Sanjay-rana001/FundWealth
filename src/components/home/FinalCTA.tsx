@@ -13,11 +13,11 @@ export function FinalCTA() {
             Ready to take control of your wealth?
           </h2>
           <p className="text-lg text-foreground/70 mb-10 max-w-2xl mx-auto">
-            Schedule a free, no-obligation consultation with one of our expert wealth advisors today and discover the FundWeALTH difference.
+            Schedule a free, no-obligation consultation with one of our expert wealth partners today and discover the FundWeALTH difference.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button variant="primary" className="text-lg py-6 px-8 w-full sm:w-auto">
-              Talk to an Advisor
+              Get in Touch
             </Button>
             <p className="text-foreground/50 text-sm sm:hidden mt-2">No commitment required.</p>
           </div>

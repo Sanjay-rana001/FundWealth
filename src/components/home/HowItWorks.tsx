@@ -10,7 +10,7 @@ export function HowItWorks() {
     {
       num: "02",
       title: "Strategy Formulation",
-      desc: "Our advisors create a bespoke asset allocation strategy using our quantitative models."
+      desc: "Our experts create a bespoke asset allocation strategy using our quantitative models."
     },
     {
       num: "03",

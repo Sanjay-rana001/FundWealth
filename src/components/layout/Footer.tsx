@@ -17,11 +17,11 @@ export function Footer() {
               </span>
             </Link>
             <p className="text-foreground/70 text-sm max-w-sm mb-6">
-              Premium wealth management and institutional-grade mutual fund advisory for individuals who demand excellence and transparency.
+              Premium wealth management and institutional-grade mutual fund distribution for individuals who demand excellence and transparency.
             </p>
             <div className="text-sm font-medium text-foreground/50">
-              SEBI RIA: INA000000000<br/>
-              AMFI ARN: 123456
+              AMFI ARN: 314036<br/>
+              BSE Member Code: 62154
             </div>
           </div>
           
@@ -38,18 +38,18 @@ export function Footer() {
           <div>
             <h4 className="font-bold mb-4">Contact</h4>
             <ul className="space-y-3 text-sm text-foreground/70">
-              <li>Achiver CP Mall,</li>
-              <li>(Sainik Colony), Sector 49,</li>
-              <li>121001</li>
-              <li className="pt-2"><a href="mailto:hello@fundwealth.com" className="hover:text-primary-600 transition-colors font-medium">hello@fundwealth.com</a></li>
-              <li><a href="tel:0123456789" className="hover:text-primary-600 transition-colors font-medium">0123456789</a></li>
+              <li>Head Office: 14, First Floor,</li>
+              <li>Above SBI Bank, Achievers Mall,</li>
+              <li>Sector-49, Faridabad, Pin-121001</li>
+              <li className="pt-2"><a href="https://www.fundwealth.in" target="_blank" rel="noopener noreferrer" className="hover:text-primary-600 transition-colors font-medium">www.fundwealth.in</a></li>
+              <li><a href="tel:7042313042" className="hover:text-primary-600 transition-colors font-medium">7042313042</a> / <a href="tel:9891361675" className="hover:text-primary-600 transition-colors font-medium">9891361675</a></li>
             </ul>
           </div>
           
         </div>
         
         <div className="pt-8 border-t border-border-color flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-foreground/50">
-          <p>&copy; {new Date().getFullYear()} FundWeALTH Advisory. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} FundWeALTH. All rights reserved.</p>
           <div className="flex gap-4">
             <Link href="/privacy" className="hover:text-primary-600">Privacy Policy</Link>
             <Link href="/terms" className="hover:text-primary-600">Terms of Service</Link>

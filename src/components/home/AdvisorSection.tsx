@@ -2,7 +2,7 @@ import React from "react";
 import { Linkedin, Twitter } from "lucide-react";
 
 export function AdvisorSection() {
-  const advisors = [
+  const team = [
     { name: "Aditya Sharma", role: "Chief Investment Officer", exp: "20+ Years Exp.", image: "/images/aditya.png" },
     { name: "Priya Desai", role: "Head of Wealth Planning", exp: "15+ Years Exp.", image: "/images/priya.png" },
     { name: "Vikram Mehta", role: "Sr. Mutual Fund Analyst", exp: "12+ Years Exp.", image: "/images/vikram.png" }
@@ -22,10 +22,10 @@ export function AdvisorSection() {
         </div>
 
         <div className="lg:col-span-2 flex flex-col md:grid md:grid-cols-3 gap-4 md:gap-6">
-          {advisors.map((advisor, idx) => (
+          {team.map((member, idx) => (
             <div key={idx} className="group cursor-pointer flex md:block items-center gap-4 bg-white md:bg-transparent p-3 md:p-0 rounded-2xl border border-border-color md:border-none shadow-sm md:shadow-none transition-all hover:border-primary-200">
               <div className="w-20 h-20 md:w-full md:h-auto md:aspect-[3/4] shrink-0 rounded-xl md:rounded-2xl bg-slate-200 md:mb-4 overflow-hidden relative border border-border-color">
-                <img src={advisor.image} alt={advisor.name} className="w-full h-full object-cover" />
+                <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
                 <div className="hidden md:flex absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent items-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="flex gap-3 text-white">
                     <Linkedin size={20} className="hover:text-primary-400" />
@@ -34,9 +34,9 @@ export function AdvisorSection() {
                 </div>
               </div>
               <div>
-                <h3 className="text-base md:text-xl font-bold">{advisor.name}</h3>
-                <p className="text-xs md:text-sm text-primary-600 font-medium md:mt-1">{advisor.role}</p>
-                <p className="text-[10px] md:text-xs text-foreground/60 mt-0.5 md:mt-1">{advisor.exp}</p>
+                <h3 className="text-base md:text-xl font-bold">{member.name}</h3>
+                <p className="text-xs md:text-sm text-primary-600 font-medium md:mt-1">{member.role}</p>
+                <p className="text-[10px] md:text-xs text-foreground/60 mt-0.5 md:mt-1">{member.exp}</p>
               </div>
             </div>
           ))}

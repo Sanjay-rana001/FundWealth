@@ -9,12 +9,12 @@ export function FAQ() {
       a: "For Mutual Fund SIPs, you can start with as low as ₹5,000 per month. For dedicated Portfolio Management Services (PMS), the regulatory minimum is ₹50 Lakhs."
     },
     {
-      q: "How are your advisory fees structured?",
-      a: "We operate on a transparent, flat-fee model for advisory, or zero-fee for direct mutual fund distribution where we earn a nominal trailing commission from the AMCs. We will clearly outline all costs before you invest."
+      q: "How are your fees structured?",
+      a: "We operate on a transparent, flat-fee model for our services, or zero-fee for direct mutual fund distribution where we earn a nominal trailing commission from the AMCs. We will clearly outline all costs before you invest."
     },
     {
       q: "Are my investments safe with FundWeALTH?",
-      a: "FundWeALTH does not hold your money. All investments are made directly in your name with the respective AMCs, held in your own demat/folio accounts. We simply act as your strategic advisor."
+      a: "FundWeALTH does not hold your money. All investments are made directly in your name with the respective AMCs, held in your own demat/folio accounts. We simply act as your strategic partner."
     },
     {
       q: "How frequently will my portfolio be reviewed?",

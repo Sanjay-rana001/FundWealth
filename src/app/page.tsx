@@ -15,6 +15,8 @@ import { InsightsTeaser } from "@/components/home/InsightsTeaser";
 import { FAQ } from "@/components/home/FAQ";
 import { FinalCTA } from "@/components/home/FinalCTA";
 
+import { ScrollReveal } from "@/components/ui/ScrollReveal";
+
 export default function Home() {
   return (
     <>
@@ -22,18 +24,19 @@ export default function Home() {
       <main className="min-h-screen">
         <HeroSection />
         <TrustIndicators />
-        <CompanyIntro />
-        <ServicesOverview />
-        <InvestmentPhilosophy />
-        <GoalBasedInvesting />
-        <CalculatorTeaser />
-        <HowItWorks />
-        <AdvisorSection />
-        <PortfolioIllustration />
-        <Testimonials />
-        <InsightsTeaser />
-        <FAQ />
-        <FinalCTA />
+        
+        <ScrollReveal><CompanyIntro /></ScrollReveal>
+        <ScrollReveal><ServicesOverview /></ScrollReveal>
+        <ScrollReveal><InvestmentPhilosophy /></ScrollReveal>
+        <ScrollReveal><GoalBasedInvesting /></ScrollReveal>
+        <ScrollReveal><CalculatorTeaser /></ScrollReveal>
+        <ScrollReveal><HowItWorks /></ScrollReveal>
+        <ScrollReveal><AdvisorSection /></ScrollReveal>
+        <ScrollReveal><PortfolioIllustration /></ScrollReveal>
+        <ScrollReveal><Testimonials /></ScrollReveal>
+        <ScrollReveal><InsightsTeaser /></ScrollReveal>
+        <ScrollReveal><FAQ /></ScrollReveal>
+        <ScrollReveal direction="none"><FinalCTA /></ScrollReveal>
       </main>
       <Footer />
     </>
