@@ -16,8 +16,11 @@ import { FAQ } from "@/components/home/FAQ";
 import { FinalCTA } from "@/components/home/FinalCTA";
 
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
+import { getSortedInsightsData } from "@/lib/insights";
 
 export default function Home() {
+  const blogs = getSortedInsightsData();
+  
   return (
     <>
       <Header />
@@ -34,7 +37,7 @@ export default function Home() {
         <ScrollReveal><AdvisorSection /></ScrollReveal>
         <ScrollReveal><PortfolioIllustration /></ScrollReveal>
         <ScrollReveal><Testimonials /></ScrollReveal>
-        <ScrollReveal><InsightsTeaser /></ScrollReveal>
+        <ScrollReveal><InsightsTeaser blogs={blogs.slice(0, 5)} /></ScrollReveal>
         <ScrollReveal><FAQ /></ScrollReveal>
         <ScrollReveal direction="none"><FinalCTA /></ScrollReveal>
       </main>

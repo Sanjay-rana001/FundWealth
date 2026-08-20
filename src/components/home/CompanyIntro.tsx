@@ -5,10 +5,10 @@ import { ArrowRight, Target, Eye, MountainSnow, ShieldCheck } from "lucide-react
 export function CompanyIntro() {
   return (
     <section id="about" className="section-padding">
-      <div className="grid lg:grid-cols-2 gap-16 items-center">
+      <div className="grid lg:grid-cols-2 gap-6 items-center">
         <div>
           <p className="text-primary-600 font-semibold tracking-wider text-sm uppercase mb-4">Who We Are</p>
-          <h2 className="text-4xl lg:text-5xl font-display font-bold leading-[1.2] mb-6">
+          <h2 className="text-4xl lg:text-4xl font-display font-bold leading-[1.2] mb-6">
             FUND WEALTH <br />
             <span className="text-foreground/50">Plan Today, Prosper Tomorrow</span>
           </h2>
@@ -21,6 +21,7 @@ export function CompanyIntro() {
                  <p className="text-base">Understanding your dreams, taking you to financial freedom.</p>
                </div>
             </div>
+            
             <div className="flex gap-4">
                <div className="mt-1 flex-shrink-0 text-primary-600"><Eye size={24}/></div>
                <div>
@@ -28,13 +29,15 @@ export function CompanyIntro() {
                  <p className="text-base">To give every Indian a prosperous and secure future through smart investing.</p>
                </div>
             </div>
+            
             <div className="flex gap-4">
                <div className="mt-1 flex-shrink-0 text-primary-600"><MountainSnow size={24}/></div>
                <div>
                  <h4 className="font-bold text-foreground">Our Mission</h4>
-                 <p className="text-base">To provide the best financial solutions with honesty, transparency, and dedication.</p>
+                 <p className="text-base">To provide structured financial solutions with honesty, transparency, and dedication.</p>
                </div>
             </div>
+            
             <div className="flex gap-4">
                <div className="mt-1 flex-shrink-0 text-primary-600"><ShieldCheck size={24}/></div>
                <div>

@@ -10,10 +10,10 @@ export function AdvisorSection() {
 
   return (
     <section className="section-padding">
-      <div className="grid lg:grid-cols-3 gap-16">
+      <div className="grid lg:grid-cols-3 gap-6">
         <div className="lg:col-span-1">
           <p className="text-primary-600 font-semibold tracking-wider text-sm uppercase mb-4">Our Experts</p>
-          <h2 className="text-3xl md:text-5xl font-display font-bold leading-tight mb-6">
+          <h2 className="text-3xl md:text-4xl font-display font-bold leading-tight mb-6">
             Managed by humans.<br />Powered by data.
           </h2>
           <p className="text-lg text-foreground/70 mb-8">

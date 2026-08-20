@@ -1,5 +1,5 @@
 import React from "react";
-import { Home, Plane, Baby, Wallet } from "lucide-react";
+import { Home, Plane, Baby, Wallet, ArrowRight } from "lucide-react";
 import { Button } from "../ui/Button";
 
 export function GoalBasedInvesting() {
@@ -11,62 +11,63 @@ export function GoalBasedInvesting() {
   ];
 
   return (
-    <section className="bg-primary-50 text-foreground py-24 relative overflow-hidden">
-      {/* Abstract Background pattern */}
-      <div className="absolute inset-0 opacity-20" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, var(--color-primary-500) 1px, transparent 0)', backgroundSize: '40px 40px' }}></div>
+    <section className="bg-slate-50 text-slate-900 py-10 relative overflow-hidden border-t border-b border-border-color">
       
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
           <div className="max-w-2xl">
-            <p className="text-primary-600 font-semibold tracking-wider text-sm uppercase mb-4">Goal-Based Investing</p>
-            <h2 className="text-4xl md:text-5xl font-display font-bold leading-tight text-primary-900">
-              Don't just invest.<br />Invest for a reason.
+            <p className="text-primary-600 font-bold tracking-widest text-xs uppercase mb-3">Goal-Based Investing</p>
+            <h2 className="text-3xl md:text-4xl font-display font-bold leading-tight text-slate-900 tracking-tight">
+              Don't just invest.<br />
+              <span className="text-primary-700">Invest for a reason.</span>
             </h2>
           </div>
-          <Button variant="primary">
+          <Button variant="primary" className="hidden md:flex">
             Start a Goal Plan
           </Button>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5">
           {goals.map((goal, idx) => (
-            <div key={idx} className="relative bg-white border border-border-color rounded-2xl p-4 md:p-6 overflow-hidden group cursor-pointer transition-all duration-500 hover:shadow-xl hover:-translate-y-1 hover:border-primary-500/30">
+            <div key={idx} className="relative bg-white border border-border-color rounded-2xl p-4 md:p-5 overflow-hidden group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-primary-300">
               
-              {/* Subtle hover background gradient */}
-              <div className="absolute inset-0 bg-gradient-to-br from-primary-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              
-              <div className="relative z-10 flex flex-row md:flex-col items-center md:items-start gap-4 md:gap-0">
-                {/* Icon Container */}
-                <div className="w-12 h-12 md:w-14 md:h-14 shrink-0 rounded-xl md:rounded-2xl bg-primary-50 border border-primary-100 flex items-center justify-center md:mb-6 text-primary-600 transition-all duration-500 group-hover:bg-primary-600 group-hover:text-white md:group-hover:scale-110 md:group-hover:rotate-6 group-hover:shadow-lg group-hover:shadow-primary-500/40">
-                  <goal.icon size={22} className="md:w-[26px] md:h-[26px] transition-transform duration-500" />
+              <div className="relative z-10">
+                {/* Header with Icon and Title */}
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 rounded-xl bg-primary-50 border border-primary-100 flex items-center justify-center text-primary-600 group-hover:bg-primary-600 group-hover:text-white transition-colors duration-300">
+                    <goal.icon size={20} strokeWidth={2} />
+                  </div>
+                  <h3 className="text-base font-display font-bold text-slate-800 group-hover:text-primary-700 transition-colors">{goal.title}</h3>
                 </div>
                 
-                <div className="flex-1 w-full">
-                  <div className="flex justify-between items-center md:items-start">
-                     <h3 className="text-base md:text-xl font-display font-bold md:mb-5 group-hover:text-primary-700 transition-colors">{goal.title}</h3>
-                     <span className="md:hidden text-primary-500 transform transition-transform group-hover:translate-x-1">→</span>
+                {/* Stats */}
+                <div className="flex justify-between items-end mb-4 bg-slate-50 rounded-xl p-3 border border-slate-100">
+                  <div>
+                    <span className="block text-[10px] font-bold text-slate-500 uppercase tracking-wide mb-1">Target</span>
+                    <span className="text-xl font-display font-bold text-primary-700">
+                      {goal.amount}
+                    </span>
                   </div>
-                  
-                  <div className="flex gap-4 md:block space-y-0 md:space-y-3 mt-1 md:mt-0">
-                    <div className="flex flex-col md:flex-row md:justify-between md:items-center text-[10px] md:text-sm">
-                      <span className="text-foreground/60 font-medium mb-0.5 md:mb-0">Target Amount</span>
-                      <span className="font-bold text-foreground bg-slate-50 border border-border-color px-1.5 md:px-2.5 py-0.5 md:py-1 rounded-md">{goal.amount}</span>
-                    </div>
-                    <div className="flex flex-col md:flex-row md:justify-between md:items-center text-[10px] md:text-sm">
-                      <span className="text-foreground/60 font-medium mb-0.5 md:mb-0">Timeline</span>
-                      <span className="font-bold text-foreground bg-slate-50 border border-border-color px-1.5 md:px-2.5 py-0.5 md:py-1 rounded-md">{goal.time}</span>
-                    </div>
+                  <div className="text-right">
+                    <span className="block text-[10px] font-bold text-slate-500 uppercase tracking-wide mb-1">Timeline</span>
+                    <span className="text-sm font-bold text-slate-700">{goal.time}</span>
                   </div>
-                  
-                  {/* Desktop Only View Strategy Link */}
-                  <div className="hidden md:flex mt-8 pt-4 border-t border-border-color text-sm font-bold text-primary-600 items-center justify-between group-hover:text-primary-700 transition-colors">
-                    <span>View Strategy</span> 
-                    <span className="transform translate-x-0 opacity-70 group-hover:translate-x-2 group-hover:opacity-100 transition-all duration-300">→</span>
-                  </div>
+                </div>
+                
+                {/* View Strategy Link */}
+                <div className="pt-2 flex items-center justify-between text-xs font-bold text-slate-500 group-hover:text-primary-600 transition-colors">
+                  <span>Discuss Strategy</span> 
+                  <ArrowRight size={14} className="transform -translate-x-1 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-300" />
                 </div>
               </div>
             </div>
           ))}
+        </div>
+        
+        <div className="mt-6 md:hidden">
+          <Button variant="primary" className="w-full">
+            Start a Goal Plan
+          </Button>
         </div>
       </div>
     </section>

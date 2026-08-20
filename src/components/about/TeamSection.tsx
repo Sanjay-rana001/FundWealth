@@ -26,18 +26,18 @@ export function TeamSection() {
   return (
     <section className="section-padding bg-background">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
+        <div className="text-center mb-10">
           <span className="text-primary-600 font-bold tracking-wider text-sm uppercase mb-3 block">Leadership</span>
-          <h2 className="text-3xl md:text-5xl font-display font-bold mb-6">Meet the Team</h2>
-          <p className="text-lg text-foreground/70 leading-relaxed max-w-2xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">Meet the Team</h2>
+          <p className="text-base md:text-lg text-foreground/70 leading-relaxed max-w-2xl mx-auto">
             Our leadership brings together decades of experience across Wall Street, Silicon Valley, and quantitative research.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {team.map((member, index) => (
             <div key={index} className="group relative rounded-3xl bg-white border border-border-color shadow-sm overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
-              <div className="aspect-square overflow-hidden relative">
+              <div className="aspect-[4/3] overflow-hidden relative">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img 
                   src={member.image} 
@@ -60,9 +60,9 @@ export function TeamSection() {
                 </div>
               </div>
               
-              <div className="p-8">
-                <h3 className="text-2xl font-display font-bold mb-1">{member.name}</h3>
-                <p className="text-primary-600 font-medium mb-4">{member.role}</p>
+              <div className="p-5">
+                <h3 className="text-xl font-display font-bold mb-1">{member.name}</h3>
+                <p className="text-primary-600 text-sm font-medium mb-3">{member.role}</p>
                 <p className="text-foreground/70 text-sm leading-relaxed">
                   {member.bio}
                 </p>

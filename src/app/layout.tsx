@@ -19,6 +19,19 @@ import { SplashScreen } from "@/components/layout/SplashScreen";
 export const metadata: Metadata = {
   title: "FundWeALTH - Premium Wealth Management",
   description: "Secure your financial future with FundWeALTH's premium investment and mutual fund solutions.",
+  openGraph: {
+    title: "FundWeALTH - Premium Wealth Management",
+    description: "Secure your financial future with FundWeALTH's premium investment and mutual fund solutions.",
+    url: "https://fundwealth.in",
+    siteName: "FundWeALTH",
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "FundWeALTH - Premium Wealth Management",
+    description: "Secure your financial future with FundWeALTH.",
+  },
 };
 
 export default function RootLayout({

@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "../ui/Button";
 import { Menu, X, User, ChevronsRight } from "lucide-react";
 
@@ -13,6 +14,10 @@ export function Header() {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
+    
+    // Check scroll position immediately on mount
+    handleScroll();
+    
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -27,35 +32,31 @@ export function Header() {
 
   const navLinks = [
     { label: "Home", href: "/" },
-    { label: "About", href: "#about" },
-    { label: "Services", href: "#services" },
-    { label: "Investments", href: "#investments" },
-    { label: "Calculators", href: "#calculators" },
-    { label: "Insights", href: "#insights" },
+    { label: "About", href: "/about" },
+    { label: "Services", href: "/#services" },
+    { label: "Investments", href: "/#investments" },
+    { label: "Calculators", href: "/calculators" },
+    { label: "Insights", href: "/insights" },
+    { label: "Contact", href: "/contact" },
   ];
 
   return (
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled || isMobileOpen
-          ? "bg-white border-b border-border-color shadow-sm py-3 md:py-4" 
-          : "bg-transparent py-4 md:py-6"
+          ? "bg-white border-b border-border-color shadow-sm py-2" 
+          : "bg-transparent py-3 md:py-4"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 md:px-12 flex items-center justify-between">
         
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2 z-50">
-          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center shadow-lg">
-            <span className="text-white font-display font-bold text-lg leading-none">W</span>
-          </div>
-          <span className="font-display font-bold text-xl tracking-tight">
-            Fund<span className="text-primary-600">WeALTH</span>
-          </span>
+        <Link href="/" className="flex items-center z-50">
+          <Image src="/images/logo_header.png" alt="FundWeALTH" width={260} height={80} className="h-10 sm:h-12 w-auto object-contain mix-blend-multiply origin-left transition-transform" priority />
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden md:flex items-center gap-5">
           {navLinks.map((link) => (
             <Link 
               key={link.label} 
@@ -101,7 +102,7 @@ export function Header() {
 
         {/* Mobile Navigation Overlay */}
         <div className={`
-          fixed inset-0 bg-white z-40 flex flex-col justify-center items-center gap-8 transition-transform duration-300 ease-in-out md:hidden
+          fixed inset-0 bg-white z-40 flex flex-col justify-center items-center gap-5 transition-transform duration-300 ease-in-out md:hidden
           ${isMobileOpen ? "translate-x-0" : "translate-x-full"}
         `}>
           {navLinks.map((link) => (

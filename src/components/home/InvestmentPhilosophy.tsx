@@ -25,7 +25,7 @@ export function InvestmentPhilosophy() {
       {/* Decorative gradient */}
       <div className="absolute right-0 top-0 w-[500px] h-[500px] bg-accent-500/5 rounded-full blur-[100px] -z-10"></div>
       
-      <div className="grid lg:grid-cols-2 gap-16 items-center">
+      <div className="grid lg:grid-cols-2 gap-6 items-center">
         <div className="order-2 lg:order-1 relative">
           <div className="absolute inset-0 bg-gradient-to-tr from-primary-600/20 to-accent-500/20 rounded-3xl transform -rotate-3 scale-105 blur-lg"></div>
           <div className="bg-surface-card border border-border-color p-8 md:p-12 rounded-3xl relative">
@@ -48,7 +48,7 @@ export function InvestmentPhilosophy() {
 
         <div className="order-1 lg:order-2">
           <p className="text-primary-600 font-semibold tracking-wider text-sm uppercase mb-4">Investment Philosophy</p>
-          <h2 className="text-4xl md:text-5xl font-display font-bold leading-tight mb-6">
+          <h2 className="text-4xl md:text-4xl font-display font-bold leading-tight mb-6">
             Methodical. Transparent. <br className="hidden md:block"/> Uncompromising.
           </h2>
           <p className="text-lg text-foreground/70 mb-8">

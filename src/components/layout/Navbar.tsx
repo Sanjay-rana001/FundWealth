@@ -17,7 +17,7 @@ export function Navbar() {
  </Link>
 
  {/* Desktop Nav */}
- <nav className="hidden md:flex items-center gap-8 font-medium text-sm">
+ <nav className="hidden md:flex items-center gap-5 font-medium text-sm">
  <Link href="#services" className="hover:text-primary-600 transition-colors">Services</Link>
  <Link href="#funds" className="hover:text-primary-600 transition-colors">Mutual Funds</Link>
  <Link href="#calculators" className="hover:text-primary-600 transition-colors">Calculators</Link>

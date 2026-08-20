@@ -6,7 +6,7 @@ export function Testimonials() {
     { text: "FundWeALTH completely restructured my haphazard investments into a streamlined, high-performing portfolio. Their transparency is unmatched.", author: "Rajeev K.", role: "Tech Executive", image: "/images/investor_1.png" },
     { text: "I was skeptical about goal-based investing until I saw their roadmap for my daughter's education. We hit the corpus 2 years ahead of schedule.", author: "Sneha M.", role: "Surgeon", image: "/images/investor_2.png" },
     { text: "Their active rebalancing saved my portfolio during the market correction. Highly recommend their wealth distribution services.", author: "Amit B.", role: "Business Owner", image: "/images/investor_3.png" },
-    { text: "Moving my entire family's assets to FundWeALTH was the best decision. Their personalized approach is phenomenal.", author: "Pooja V.", role: "Architect", image: "/images/investor_4.png" },
+    { text: "Moving my entire family's assets to FundWeALTH was a great decision. Their personalized approach is phenomenal.", author: "Pooja V.", role: "Architect", image: "/images/investor_4.png" },
     { text: "The team’s depth of market knowledge is astounding. They predicted the tech sector rotation perfectly.", author: "Vikram S.", role: "Startup Founder", image: "/images/investor_1.png" },
     { text: "I finally have peace of mind knowing my retirement corpus is managed by genuine experts, not just algorithms.", author: "Meera R.", role: "Retiree", image: "/images/investor_2.png" },
     { text: "Their tax-harvesting strategies alone paid for their services multiple times over. Brilliant execution.", author: "Karan D.", role: "CA", image: "/images/investor_3.png" },
@@ -24,11 +24,11 @@ export function Testimonials() {
   const marqueeItems = [...allTestimonials, ...allTestimonials];
 
   return (
-    <section className="bg-slate-50 py-24 overflow-hidden">
+    <section className="bg-slate-50 py-12 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
-        <div className="text-center max-w-2xl mx-auto mb-16">
+        <div className="text-center max-w-2xl mx-auto mb-8">
           <p className="text-primary-600 font-semibold tracking-wider text-sm uppercase mb-4">Client Stories</p>
-          <h2 className="text-3xl md:text-5xl font-display font-bold mb-6">Built on trust. <br/>Proven by results.</h2>
+          <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">Built on trust. <br/>Proven by results.</h2>
         </div>
       </div>
 

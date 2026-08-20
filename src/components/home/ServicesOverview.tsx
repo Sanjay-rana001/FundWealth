@@ -88,10 +88,10 @@ export function ServicesOverview() {
       <div className="max-w-6xl mx-auto px-6 md:px-12">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-12">
+        <div className="text-center max-w-3xl mx-auto mb-6">
           <p className="text-primary-700 font-bold tracking-widest text-sm uppercase mb-3">Our Expertise</p>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-5 text-slate-900 tracking-tight">
-            Wealth solutions built for <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-primary-800">your future.</span>
+          <h2 className="text-4xl md:text-4xl lg:text-4xl font-display font-bold mb-5 text-slate-900 tracking-tight">
+            Wealth solutions built for <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-primary-900">your future.</span>
           </h2>
           <p className="text-slate-700 text-lg md:text-xl font-medium">
             Explore our comprehensive suite of investment products designed to protect and grow your capital across all market cycles.
@@ -99,7 +99,7 @@ export function ServicesOverview() {
         </div>
 
         {/* Interactive Tabs Layout */}
-        <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-stretch">
+        <div className="flex flex-col lg:flex-row gap-5 lg:gap-6 items-stretch">
           
           {/* Left Column: Tab List */}
           <div className="w-full lg:w-4/12 flex flex-col gap-1.5">
@@ -148,8 +148,8 @@ export function ServicesOverview() {
                 className="absolute inset-0 bg-slate-50 rounded-[2rem] border border-slate-200 p-6 md:p-8 overflow-hidden flex flex-col"
               >
                 {/* Large Background Icon Watermark */}
-                <div className={`absolute -bottom-8 -right-8 opacity-[0.03] text-slate-900 pointer-events-none`}>
-                  <activeService.icon size={200} strokeWidth={1} />
+                <div className={`absolute bottom-0 right-2 opacity-10 ${activeService.color} pointer-events-none transition-colors duration-500`}>
+                  <activeService.icon size={180} strokeWidth={1} />
                 </div>
 
                 <div className={`w-14 h-14 rounded-xl ${activeService.bg} ${activeService.color} flex items-center justify-center mb-5 shadow-lg ${activeService.glow}`}>

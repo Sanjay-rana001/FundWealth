@@ -36,7 +36,7 @@ export function TrustIndicators() {
   return (
     <section className="bg-surface-card border-y border-border-color py-12">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left divide-y md:divide-y-0 md:divide-x divide-border-color">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 text-center md:text-left divide-y md:divide-y-0 md:divide-x divide-border-color">
           {stats.map((stat, idx) => (
             <div key={idx} className={`flex items-center gap-4 ${idx !== 0 ? 'md:pl-8 pt-6 md:pt-0' : ''}`}>
               <div className="w-12 h-12 rounded-full bg-primary-100 text-primary-600 flex items-center justify-center shrink-0">

@@ -25,14 +25,14 @@ export function HowItWorks() {
   ];
 
   return (
-    <section className="bg-surface-card border-y border-border-color py-24">
+    <section className="bg-surface-card border-y border-border-color py-12">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
-        <div className="text-center max-w-2xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-5xl font-display font-bold mb-6">How It Works</h2>
+        <div className="text-center max-w-2xl mx-auto mb-8">
+          <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">How It Works</h2>
           <p className="text-foreground/70 text-lg">A systematic, friction-free journey from your first consultation to total financial freedom.</p>
         </div>
         
-        <div className="grid md:grid-cols-4 gap-8 relative">
+        <div className="grid md:grid-cols-4 gap-5 relative">
           {/* Connector Line (Desktop) */}
           <div className="hidden md:block absolute top-8 left-0 w-full h-[2px] bg-border-color"></div>
           

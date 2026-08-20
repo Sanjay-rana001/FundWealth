@@ -28,14 +28,14 @@ export function CoreValues() {
   return (
     <section className="section-padding bg-slate-50 border-t border-border-color">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-display font-bold mb-6">Our Core Values</h2>
+        <div className="text-center mb-8">
+          <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">Our Core Values</h2>
           <p className="text-lg text-foreground/70 leading-relaxed max-w-2xl mx-auto">
             These are the non-negotiable principles that guide our platform, our team, and our commitment to you.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
           {values.map((value, index) => (
             <div key={index} className="p-8 rounded-3xl bg-white border border-border-color shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
               <div className="w-16 h-16 rounded-2xl bg-primary-50 flex items-center justify-center mb-6">

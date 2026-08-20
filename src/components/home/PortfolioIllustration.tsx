@@ -132,7 +132,7 @@ export function PortfolioIllustration() {
               transition={{ delay: 0.8, type: "spring", bounce: 0.5 }}
             >
               <span className="text-[10px] md:text-xs text-foreground/50 uppercase tracking-widest font-semibold mb-0.5">Expected Alpha</span>
-              <span className="text-3xl md:text-5xl font-display font-bold text-gray-900 tracking-tight">+5.2%</span>
+              <span className="text-3xl md:text-4xl font-display font-bold text-gray-900 tracking-tight">+5.2%</span>
             </motion.div>
           </motion.div>
         </div>
