@@ -82,7 +82,7 @@ export function AssociatedAMCs() {
               <img 
                 src={`/images/amc/${logo}`} 
                 alt={logo.split('.')[0].replace(/%20/g, ' ')} 
-                className={`max-w-full max-h-full transition-all duration-300 ${logo.toLowerCase().includes('kotak') ? 'object-contain scale-[1.3]' : 'object-contain mix-blend-multiply'} ${logo.toLowerCase().includes('tata') ? 'scale-[1.6]' : ''}`} 
+                className={`max-w-full max-h-full transition-all duration-300 ${logo.toLowerCase().includes('kotak') ? 'object-contain scale-[1.15]' : 'object-contain mix-blend-multiply'} ${logo.toLowerCase().includes('tata') ? 'scale-[1.6]' : ''}`} 
               />
             </div>
           ))}
@@ -95,7 +95,7 @@ export function AssociatedAMCs() {
               <img 
                 src={`/images/amc/${logo}`} 
                 alt={logo.split('.')[0].replace(/%20/g, ' ')} 
-                className={`max-w-full max-h-full transition-all duration-300 ${logo.toLowerCase().includes('kotak') ? 'object-contain scale-[1.3]' : 'object-contain mix-blend-multiply'} ${logo.toLowerCase().includes('tata') ? 'scale-[1.6]' : ''}`} 
+                className={`max-w-full max-h-full transition-all duration-300 ${logo.toLowerCase().includes('kotak') ? 'object-contain scale-[1.15]' : 'object-contain mix-blend-multiply'} ${logo.toLowerCase().includes('tata') ? 'scale-[1.6]' : ''}`} 
               />
             </div>
           ))}
@@ -108,7 +108,7 @@ export function AssociatedAMCs() {
               <img 
                 src={`/images/amc/${logo}`} 
                 alt={logo.split('.')[0].replace(/%20/g, ' ')} 
-                className={`max-w-full max-h-full transition-all duration-300 ${logo.toLowerCase().includes('kotak') ? 'object-contain scale-[1.3]' : 'object-contain mix-blend-multiply'} ${logo.toLowerCase().includes('tata') ? 'scale-[1.6]' : ''}`} 
+                className={`max-w-full max-h-full transition-all duration-300 ${logo.toLowerCase().includes('kotak') ? 'object-contain scale-[1.15]' : 'object-contain mix-blend-multiply'} ${logo.toLowerCase().includes('tata') ? 'scale-[1.6]' : ''}`} 
               />
             </div>
           ))}
