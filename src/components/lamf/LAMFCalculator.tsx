@@ -107,7 +107,11 @@ export function LAMFCalculator() {
             </div>
 
             <div className="mt-8 relative z-10">
-              <Button variant="primary" size="lg" className="w-full shadow-[0_0_20px_rgba(16,185,129,0.2)]" onClick={() => setIsModalOpen(true)}>
+              <Button 
+                variant="primary" 
+                className="w-full text-base shadow-lg shadow-primary-500/20"
+                onClick={() => setIsModalOpen(true)}
+              >
                 Apply Now to Unlock Limit
                 <ArrowRight size={18} className="ml-2" />
               </Button>
