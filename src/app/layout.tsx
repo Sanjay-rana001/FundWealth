@@ -43,7 +43,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`scroll-smooth ${inter.variable} ${outfit.variable}`}>
       <body className="antialiased bg-background text-foreground overflow-x-hidden relative min-h-screen">
-        <SplashScreen />
+        {/* <SplashScreen /> */}
         <main className="pb-28 md:pb-0">
           {children}
         </main>
