@@ -1,12 +1,13 @@
 import React, { Suspense } from "react";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { AppDownloadFAB } from "@/components/ui/AppDownloadFAB";
 import { ScrollToTop } from "@/components/ui/ScrollToTop";
 import { InvestmentCalculator } from "@/components/calculators/InvestmentCalculator";
 import { FinalCTA } from "@/components/home/FinalCTA";
 
 export const metadata = {
-  title: "Financial Calculators | FundWeALTH",
+  title: "Financial Calculators | Fundwealth",
   description: "Plan your wealth creation journey with our advanced SIP and Lumpsum calculators.",
 };
 
@@ -37,6 +38,7 @@ export default function CalculatorsPage() {
 
       <FinalCTA />
       <Footer />
+      <AppDownloadFAB />
       <ScrollToTop />
     </main>
   );

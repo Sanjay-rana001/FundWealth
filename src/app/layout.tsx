@@ -12,25 +12,26 @@ const outfit = Outfit({
   subsets: ["latin"],
 });
 
+import { AppDownloadFAB } from "@/components/ui/AppDownloadFAB";
 import { ScrollToTop } from "@/components/ui/ScrollToTop";
 import { BottomNav } from "@/components/layout/BottomNav";
 import { SplashScreen } from "@/components/layout/SplashScreen";
 
 export const metadata: Metadata = {
-  title: "FundWeALTH - Premium Wealth Management",
-  description: "Secure your financial future with FundWeALTH's premium investment and mutual fund solutions.",
+  title: "FundWealth | AMFI Registered Mutual Fund Distributor",
+  description: "Secure your financial future with FundWealth's premium investment and mutual fund solutions.",
   openGraph: {
-    title: "FundWeALTH - Premium Wealth Management",
-    description: "Secure your financial future with FundWeALTH's premium investment and mutual fund solutions.",
+    title: "FundWealth - Premium Wealth Management",
+    description: "Secure your financial future with FundWealth's premium investment and mutual fund solutions.",
     url: "https://fundwealth.in",
-    siteName: "FundWeALTH",
+    siteName: "FundWealth",
     locale: "en_IN",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "FundWeALTH - Premium Wealth Management",
-    description: "Secure your financial future with FundWeALTH.",
+    title: "FundWealth - Premium Wealth Management",
+    description: "Secure your financial future with FundWealth.",
   },
 };
 
@@ -47,7 +48,8 @@ export default function RootLayout({
           {children}
         </main>
         <BottomNav />
-        <ScrollToTop />
+        <AppDownloadFAB />
+      <ScrollToTop />
       </body>
     </html>
   );

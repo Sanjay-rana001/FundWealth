@@ -2,6 +2,7 @@
 title: "The Mid-Cap Advantage: Why They Often Outperform"
 date: "2024-03-05"
 category: "Market Insights"
+icon: "Globe"
 readTime: "8 min read"
 excerpt: "Exploring the unique characteristics that allow mid-cap companies to deliver exceptional long-term growth in the Indian market."
 ---

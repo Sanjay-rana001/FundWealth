@@ -1,14 +1,15 @@
 import React from "react";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { AppDownloadFAB } from "@/components/ui/AppDownloadFAB";
 import { ScrollToTop } from "@/components/ui/ScrollToTop";
 import { Button } from "@/components/ui/Button";
 import { ContactForm } from "@/components/contact/ContactForm";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 
 export const metadata = {
-  title: "Contact Us | FundWeALTH",
-  description: "Get in touch with FundWeALTH to start your wealth creation journey.",
+  title: "Contact Us | Fundwealth",
+  description: "Get in touch with Fundwealth to start your wealth creation journey.",
 };
 
 export default function ContactPage() {
@@ -98,6 +99,7 @@ export default function ContactPage() {
       </div>
 
       <Footer />
+      <AppDownloadFAB />
       <ScrollToTop />
     </main>
   );

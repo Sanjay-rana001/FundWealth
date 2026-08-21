@@ -2,6 +2,7 @@
 title: "The Magic of Compounding: Why Starting Early Matters"
 date: "2024-03-20"
 category: "Wealth Creation"
+icon: "TrendingUp"
 readTime: "5 min read"
 excerpt: "Albert Einstein allegedly called compounding the eighth wonder of the world. Here's exactly why it works."
 ---

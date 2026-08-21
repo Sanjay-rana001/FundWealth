@@ -110,22 +110,31 @@ export function InvestmentCalculator() {
             <div>
               <div className="flex justify-between items-center mb-4">
                 <label className="font-semibold text-slate-700">{isSIP ? "Monthly Investment" : "Total Investment"}</label>
-                <div className="bg-slate-50 px-4 py-2 rounded-lg border border-slate-200 font-bold text-primary-700">
-                  {formatCurrency(investment)}
+                <div className="bg-slate-50 px-3 py-1.5 rounded-lg border border-slate-200 font-bold text-primary-700 flex items-center focus-within:border-primary-500 transition-colors">
+                  <span className="mr-1">₹</span>
+                  <input
+                    type="text"
+                    value={investment ? investment.toLocaleString('en-IN') : ""}
+                    onChange={(e) => {
+                      const val = e.target.value.replace(/[^0-9]/g, "");
+                      setInvestment(Number(val));
+                    }}
+                    className="bg-transparent border-none outline-none w-28 text-right font-bold text-primary-700"
+                  />
                 </div>
               </div>
               <input 
                 type="range" 
-                min={isSIP ? "500" : "5000"} 
-                max={isSIP ? "100000" : "10000000"} 
-                step={isSIP ? "500" : "5000"}
+                min={isSIP ? 500 : 5000} 
+                max={Math.max(investment, isSIP ? 100000 : 10000000)} 
+                step={isSIP ? 500 : 5000}
                 value={investment} 
                 onChange={(e) => setInvestment(Number(e.target.value))}
                 className="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-primary-600"
               />
               <div className="flex justify-between text-xs text-slate-400 mt-2 font-medium">
                 <span>{isSIP ? "₹500" : "₹5,000"}</span>
-                <span>{isSIP ? "₹1,00,000" : "₹1 Cr"}</span>
+                <span>{formatCurrency(Math.max(investment, isSIP ? 100000 : 10000000))}</span>
               </div>
             </div>
 
@@ -133,14 +142,23 @@ export function InvestmentCalculator() {
             <div>
               <div className="flex justify-between items-center mb-4">
                 <label className="font-semibold text-slate-700">Expected Return (p.a)</label>
-                <div className="bg-slate-50 px-4 py-2 rounded-lg border border-slate-200 font-bold text-primary-700">
-                  {expectedReturn}%
+                <div className="bg-slate-50 px-3 py-1.5 rounded-lg border border-slate-200 font-bold text-primary-700 flex items-center focus-within:border-primary-500 transition-colors">
+                  <input
+                    type="text"
+                    value={expectedReturn || ""}
+                    onChange={(e) => {
+                      const val = e.target.value.replace(/[^0-9]/g, "");
+                      setExpectedReturn(Number(val));
+                    }}
+                    className="bg-transparent border-none outline-none w-16 text-right font-bold text-primary-700"
+                  />
+                  <span className="ml-1">%</span>
                 </div>
               </div>
               <input 
                 type="range" 
                 min="1" 
-                max="30" 
+                max={Math.max(expectedReturn, 30)} 
                 step="1"
                 value={expectedReturn} 
                 onChange={(e) => setExpectedReturn(Number(e.target.value))}
@@ -148,7 +166,7 @@ export function InvestmentCalculator() {
               />
               <div className="flex justify-between text-xs text-slate-400 mt-2 font-medium">
                 <span>1%</span>
-                <span>30%</span>
+                <span>{Math.max(expectedReturn, 30)}%</span>
               </div>
             </div>
 
@@ -156,14 +174,23 @@ export function InvestmentCalculator() {
             <div>
               <div className="flex justify-between items-center mb-4">
                 <label className="font-semibold text-slate-700">Time Period</label>
-                <div className="bg-slate-50 px-4 py-2 rounded-lg border border-slate-200 font-bold text-primary-700">
-                  {timePeriod} Years
+                <div className="bg-slate-50 px-3 py-1.5 rounded-lg border border-slate-200 font-bold text-primary-700 flex items-center focus-within:border-primary-500 transition-colors">
+                  <input
+                    type="text"
+                    value={timePeriod || ""}
+                    onChange={(e) => {
+                      const val = e.target.value.replace(/[^0-9]/g, "");
+                      setTimePeriod(Number(val));
+                    }}
+                    className="bg-transparent border-none outline-none w-16 text-right font-bold text-primary-700"
+                  />
+                  <span className="ml-1">Years</span>
                 </div>
               </div>
               <input 
                 type="range" 
                 min="1" 
-                max="40" 
+                max={Math.max(timePeriod, 40)} 
                 step="1"
                 value={timePeriod} 
                 onChange={(e) => setTimePeriod(Number(e.target.value))}
@@ -171,7 +198,7 @@ export function InvestmentCalculator() {
               />
               <div className="flex justify-between text-xs text-slate-400 mt-2 font-medium">
                 <span>1 Yr</span>
-                <span>40 Yrs</span>
+                <span>{Math.max(timePeriod, 40)} Yrs</span>
               </div>
             </div>
           </div>

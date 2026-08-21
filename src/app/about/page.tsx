@@ -1,6 +1,7 @@
 import React from "react";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { AppDownloadFAB } from "@/components/ui/AppDownloadFAB";
 import { ScrollToTop } from "@/components/ui/ScrollToTop";
 import { AboutHero } from "@/components/about/AboutHero";
 import { CompanyStory } from "@/components/about/CompanyStory";
@@ -9,8 +10,8 @@ import { CoreValues } from "@/components/about/CoreValues";
 import { FinalCTA } from "@/components/home/FinalCTA";
 
 export const metadata = {
-  title: "About Us | FundWeALTH",
-  description: "Learn more about our mission, our story, and the leadership team driving FundWeALTH.",
+  title: "About Us | Fundwealth",
+  description: "Learn more about our mission, our story, and the leadership team driving Fundwealth.",
 };
 
 export default function AboutPage() {
@@ -27,6 +28,7 @@ export default function AboutPage() {
       </div>
 
       <Footer />
+      <AppDownloadFAB />
       <ScrollToTop />
     </main>
   );

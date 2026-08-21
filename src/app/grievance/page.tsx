@@ -4,7 +4,7 @@ import { Footer } from "@/components/layout/Footer";
 import { ExternalLink } from "lucide-react";
 
 export const metadata = {
-  title: "Grievance Redressal | FundWeALTH",
+  title: "Grievance Redressal | Fundwealth",
   description: "Grievance redressal mechanism and escalation matrix.",
 };
 
@@ -18,7 +18,7 @@ export default function GrievancePage() {
         
         <div className="prose prose-slate max-w-none space-y-8">
           <p className="text-lg text-slate-700">
-            At FundWeALTH, client satisfaction is our priority. In case of any grievances or complaints regarding our services, please follow the escalation matrix below.
+            At Fundwealth, client satisfaction is our priority. In case of any grievances or complaints regarding our services, please follow the escalation matrix below.
           </p>
           
           <section>

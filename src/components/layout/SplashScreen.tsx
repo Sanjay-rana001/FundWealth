@@ -69,7 +69,7 @@ export function SplashScreen() {
               }}
               className="relative flex items-center justify-center p-4"
             >
-              <Image src="/images/logo-5.png" alt="FundWeALTH" width={400} height={120} className="w-auto h-32 sm:h-40 object-contain drop-shadow-2xl" priority />
+              <Image src="/images/logo-5.png" alt="Fundwealth" width={400} height={120} className="w-auto h-32 sm:h-40 object-contain drop-shadow-2xl" priority />
             </motion.div>
 
             {/* Text Animation */}

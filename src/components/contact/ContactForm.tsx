@@ -31,7 +31,7 @@ export function ContactForm() {
         </div>
         <h3 className="text-2xl font-display font-bold mb-4">Message Sent!</h3>
         <p className="text-slate-600 mb-8 max-w-md mx-auto">
-          Thank you for reaching out to FundWeALTH. One of our wealth partners will get back to you within 24 hours.
+          Thank you for reaching out to Fundwealth. One of our wealth partners will get back to you within 24 hours.
         </p>
         <Button variant="outline" onClick={() => setIsSuccess(false)}>
           Send another message

@@ -26,7 +26,7 @@ export function CompanyStory() {
               </div>
             </div>
             <p className="text-foreground/70 text-sm leading-relaxed">
-              FundWeALTH was founded with a simple observation: the tools used by institutional investors were lightyears ahead of what was available to the everyday person. We set out to bridge that gap.
+              Fundwealth was founded with a simple observation: the tools used by institutional investors were lightyears ahead of what was available to the everyday person. We set out to bridge that gap.
             </p>
           </div>
 

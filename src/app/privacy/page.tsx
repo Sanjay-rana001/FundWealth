@@ -1,10 +1,11 @@
 import React from "react";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { AppDownloadFAB } from "@/components/ui/AppDownloadFAB";
 import { ScrollToTop } from "@/components/ui/ScrollToTop";
 
 export const metadata = {
-  title: "Privacy Policy | FundWeALTH",
+  title: "Privacy Policy | Fundwealth",
 };
 
 export default function PrivacyPage() {
@@ -19,7 +20,7 @@ export default function PrivacyPage() {
           <p>Last updated: {new Date().toLocaleDateString()}</p>
           
           <h2>1. Introduction</h2>
-          <p>Welcome to FundWeALTH. We respect your privacy and are committed to protecting your personal data. This privacy policy will inform you as to how we look after your personal data when you visit our website and tell you about your privacy rights and how the law protects you.</p>
+          <p>Welcome to Fundwealth. We respect your privacy and are committed to protecting your personal data. This privacy policy will inform you as to how we look after your personal data when you visit our website and tell you about your privacy rights and how the law protects you.</p>
           
           <h2>2. The data we collect about you</h2>
           <p>Personal data, or personal information, means any information about an individual from which that person can be identified. We may collect, use, store and transfer different kinds of personal data about you which we have grouped together as follows:</p>
@@ -46,6 +47,7 @@ export default function PrivacyPage() {
       </div>
 
       <Footer />
+      <AppDownloadFAB />
       <ScrollToTop />
     </main>
   );

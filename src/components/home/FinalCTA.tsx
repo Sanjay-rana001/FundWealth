@@ -1,9 +1,12 @@
-import React from "react";
-import { Button } from "../ui/Button";
-import Link from "next/link";
-import { ArrowRight, Sparkles } from "lucide-react";
+"use client";
+
+import React, { useState } from "react";
+import { ArrowRight } from "lucide-react";
+import { ContactModal } from "../ui/ContactModal";
 
 export function FinalCTA() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <section className="py-8 md:py-12 px-4 md:px-8">
       <div className="max-w-4xl mx-auto bg-slate-900 rounded-3xl p-8 md:p-12 text-center relative overflow-hidden shadow-2xl border border-slate-800">
@@ -25,11 +28,14 @@ export function FinalCTA() {
           </h2>
           
           <p className="text-base md:text-lg text-slate-300 mb-8 max-w-2xl mx-auto leading-relaxed">
-            Schedule a free, no-obligation consultation with our wealth partners today and discover the FundWeALTH difference.
+            Schedule a free, no-obligation consultation with our wealth partners today and discover the Fundwealth difference.
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-5 w-full sm:w-auto">
-            <Link href="/contact" className="relative flex items-center p-[6px] rounded-full bg-white/5 border border-white/10 group overflow-hidden shadow-lg hover:shadow-[0_0_40px_-10px_rgba(16,185,129,0.5)] transition-all">
+            <button 
+              onClick={() => setIsModalOpen(true)}
+              className="relative flex items-center p-[6px] rounded-full bg-white/5 border border-white/10 group overflow-hidden shadow-lg hover:shadow-[0_0_40px_-10px_rgba(16,185,129,0.5)] transition-all cursor-pointer focus:outline-none"
+            >
               
               {/* Background Sweep */}
               <div className="absolute inset-0 bg-primary-500 rounded-full -translate-x-[101%] group-hover:translate-x-0 transition-transform duration-300 ease-in-out z-10" />
@@ -48,12 +54,14 @@ export function FinalCTA() {
                 <ArrowRight className="absolute left-0 w-6 h-6 text-white -translate-x-10 transition-all duration-300 ease-in-out group-hover:translate-x-0 group-hover:text-white" />
               </div>
 
-            </Link>
+            </button>
           </div>
           
           <p className="text-slate-500 text-sm mt-6 font-medium">No commitment required. 100% confidential.</p>
         </div>
       </div>
+
+      <ContactModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </section>
   );
 }

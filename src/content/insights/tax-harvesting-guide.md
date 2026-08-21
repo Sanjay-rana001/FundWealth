@@ -2,6 +2,7 @@
 title: "Tax-Loss Harvesting: A Complete Guide for Indian Investors"
 date: "2024-03-15"
 category: "Tax Planning"
+icon: "Target"
 readTime: "7 min read"
 excerpt: "Learn how to use market downturns to legally reduce your tax liability and optimize portfolio returns."
 ---

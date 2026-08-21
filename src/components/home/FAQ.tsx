@@ -13,8 +13,8 @@ export function FAQ() {
       a: "We operate on a transparent, flat-fee model for our services, or zero-fee for direct mutual fund distribution where we earn a nominal trailing commission from the AMCs. We will clearly outline all costs before you invest."
     },
     {
-      q: "Are my investments safe with FundWeALTH?",
-      a: "FundWeALTH does not hold your money. All investments are made directly in your name with the respective AMCs, held in your own demat/folio accounts. We simply act as your strategic partner."
+      q: "Are my investments safe with Fundwealth?",
+      a: "Fundwealth does not hold your money. All investments are made directly in your name with the respective AMCs, held in your own demat/folio accounts. We simply act as your strategic partner."
     },
     {
       q: "How frequently will my portfolio be reviewed?",

@@ -1,13 +1,14 @@
 import React from "react";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { AppDownloadFAB } from "@/components/ui/AppDownloadFAB";
 import { ScrollToTop } from "@/components/ui/ScrollToTop";
 import { InsightsTeaser } from "@/components/home/InsightsTeaser";
 import { FinalCTA } from "@/components/home/FinalCTA";
 import { getSortedInsightsData } from "@/lib/insights";
 
 export const metadata = {
-  title: "Market Insights | FundWeALTH",
+  title: "Market Insights | Fundwealth",
   description: "Read the latest financial insights, market outlooks, and wealth education articles.",
 };
 
@@ -35,6 +36,7 @@ export default function InsightsPage() {
 
       <FinalCTA />
       <Footer />
+      <AppDownloadFAB />
       <ScrollToTop />
     </main>
   );

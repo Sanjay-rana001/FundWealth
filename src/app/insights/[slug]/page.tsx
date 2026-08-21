@@ -2,6 +2,7 @@ import React from "react";
 import { getInsightData, getSortedInsightsData } from "@/lib/insights";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { AppDownloadFAB } from "@/components/ui/AppDownloadFAB";
 import { ScrollToTop } from "@/components/ui/ScrollToTop";
 import { FinalCTA } from "@/components/home/FinalCTA";
 import Link from "next/link";
@@ -18,7 +19,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   const { slug } = await params;
   const postData = await getInsightData(slug);
   return {
-    title: `${postData.title} | FundWeALTH Insights`,
+    title: `${postData.title} | Fundwealth Insights`,
     description: postData.excerpt || "Read our latest financial insight.",
   };
 }
@@ -55,6 +56,7 @@ export default async function InsightPost({ params }: { params: { slug: string }
 
       <FinalCTA />
       <Footer />
+      <AppDownloadFAB />
       <ScrollToTop />
     </main>
   );

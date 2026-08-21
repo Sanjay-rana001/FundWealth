@@ -25,7 +25,7 @@ export function AboutHero() {
         
         {/* Lead Paragraph */}
         <p className="text-base md:text-lg text-foreground/70 max-w-3xl mx-auto leading-relaxed mb-6">
-          We believe that sophisticated investment strategies shouldn't be reserved exclusively for the ultra-wealthy. FundWeALTH was founded on the principle that modern technology and trusted expertise can unlock institutional-grade portfolios for everyone.
+          We believe that sophisticated investment strategies shouldn't be reserved exclusively for the ultra-wealthy. Fundwealth was founded on the principle that modern technology and trusted expertise can unlock institutional-grade portfolios for everyone.
         </p>
 
         {/* Key Highlight Stats/Pillars */}

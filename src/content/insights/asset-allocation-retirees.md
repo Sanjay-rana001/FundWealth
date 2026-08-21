@@ -2,6 +2,7 @@
 title: "Asset Allocation for Retirees: Protecting Wealth in Volatile Times"
 date: "2024-03-10"
 category: "Retirement"
+icon: "Shield"
 readTime: "6 min read"
 excerpt: "How to balance capital preservation with inflation protection during your retirement years."
 ---
@@ -21,7 +22,7 @@ The goal of a retiree's asset allocation is to strike a delicate balance between
 
 ## The Bucket Strategy
 
-At FundWeALTH, we often recommend the "Bucket Strategy" for our retired clients. Instead of looking at your corpus as one giant pool of money, you divide it into three distinct buckets based on when you will need the cash.
+At Fundwealth, we often recommend the "Bucket Strategy" for our retired clients. Instead of looking at your corpus as one giant pool of money, you divide it into three distinct buckets based on when you will need the cash.
 
 ### Bucket 1: The Liquidity Bucket (Years 1 to 3)
 **Objective:** Absolute safety and immediate liquidity.

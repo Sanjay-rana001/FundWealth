@@ -3,7 +3,7 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 
 export const metadata = {
-  title: "Regulatory Disclosures | FundWeALTH",
+  title: "Regulatory Disclosures | Fundwealth",
   description: "Important regulatory disclosures and conflict of interest information.",
 };
 

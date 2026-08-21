@@ -2,6 +2,7 @@
 title: "The Great Debate: Active vs Passive Investing in 2024"
 date: "2024-03-25"
 category: "Strategy"
+icon: "BookOpen"
 readTime: "6 min read"
 excerpt: "Understanding when to use index funds and when to rely on active fund managers for alpha generation."
 ---
@@ -40,7 +41,7 @@ While passive investing has completely dominated the US markets over the last de
 
 ## The Core-Satellite Approach
 
-At FundWeALTH, we do not view this as a mutually exclusive choice. We advocate for the **Core-Satellite approach**.
+At Fundwealth, we do not view this as a mutually exclusive choice. We advocate for the **Core-Satellite approach**.
 
 - **The Core (Passive):** 50-60% of your equity portfolio can be in low-cost passive index funds tracking broad market large-cap indices. This provides stability, low costs, and guaranteed market returns.
 - **The Satellite (Active):** The remaining 40-50% is deployed in high-conviction active funds focusing on mid-caps, small-caps, and specific thematic opportunities. This is where we generate "Alpha" (excess returns).
