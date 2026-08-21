@@ -91,7 +91,7 @@ export function AppDownloadFAB() {
   return (
     <div 
       ref={menuRef}
-      className={`fixed bottom-[110px] right-3 md:bottom-[120px] md:right-8 z-[60] transition-all duration-500 flex flex-col items-end ${
+      className={`fixed bottom-[135px] right-3 md:bottom-[120px] md:right-8 z-[60] transition-all duration-500 flex flex-col items-end ${
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10 pointer-events-none"
       }`}
     >
