@@ -15,8 +15,7 @@ const amcLogos = [
   "canara robeco mutual fund.svg",
   "franklin templeton mutual fund.png",
   "hdfc mutual fund.svg",
-  "imgi_68_media_1568ccbe9f1bbf7ff56cfd891c51017ee522e5319.png",
-  "kotak mahindra mutual fund.svg",
+  "kotak-mutual-fund.png",
   "mirae asset mutual fund.png",
   "nippon india mutual fund.png",
   "ppfas mutual fund.png",
@@ -79,11 +78,11 @@ export function AssociatedAMCs() {
         {/* Row 1 (Moving Left - Fast) */}
         <div className="flex w-max animate-marquee-left-fast gap-4 md:gap-8 px-4">
           {extendedRow1.map((logo, idx) => (
-            <div key={`r1-${idx}`} className={`w-[120px] md:w-[220px] h-[60px] md:h-[90px] shrink-0 border rounded-2xl flex items-center justify-center p-3 md:p-5 shadow-sm hover:shadow-md transition-all cursor-pointer group hover:-translate-y-1 ${logo.includes('imgi_68') ? 'bg-slate-800 border-slate-700' : 'bg-white border-slate-100'}`}>
+            <div key={`r1-${idx}`} className={`w-[120px] md:w-[220px] h-[60px] md:h-[90px] shrink-0 border rounded-2xl flex items-center justify-center shadow-sm hover:shadow-md transition-all cursor-pointer group hover:-translate-y-1 overflow-hidden ${logo.toLowerCase().includes('kotak') ? 'bg-black border-black p-0' : 'bg-white border-slate-100 p-3 md:p-5'}`}>
               <img 
                 src={`/images/amc/${logo}`} 
                 alt={logo.split('.')[0].replace(/%20/g, ' ')} 
-                className={`max-w-full max-h-full object-contain transition-all duration-300 ${logo.includes('imgi_68') ? '' : 'mix-blend-multiply'} ${logo.toLowerCase().includes('tata') ? 'scale-[1.6]' : ''}`} 
+                className={`max-w-full max-h-full transition-all duration-300 ${logo.toLowerCase().includes('kotak') ? 'object-contain scale-[1.8]' : 'object-contain mix-blend-multiply'} ${logo.toLowerCase().includes('tata') ? 'scale-[1.6]' : ''}`} 
               />
             </div>
           ))}
@@ -92,11 +91,11 @@ export function AssociatedAMCs() {
         {/* Row 2 (Moving Right - Medium) */}
         <div className="flex w-max animate-marquee-right-medium gap-4 md:gap-8 px-4">
           {extendedRow2.map((logo, idx) => (
-            <div key={`r2-${idx}`} className={`w-[120px] md:w-[220px] h-[60px] md:h-[90px] shrink-0 border rounded-2xl flex items-center justify-center p-3 md:p-5 shadow-sm hover:shadow-md transition-all cursor-pointer group hover:-translate-y-1 ${logo.includes('imgi_68') ? 'bg-slate-800 border-slate-700' : 'bg-white border-slate-100'}`}>
+            <div key={`r2-${idx}`} className={`w-[120px] md:w-[220px] h-[60px] md:h-[90px] shrink-0 border rounded-2xl flex items-center justify-center shadow-sm hover:shadow-md transition-all cursor-pointer group hover:-translate-y-1 overflow-hidden ${logo.toLowerCase().includes('kotak') ? 'bg-black border-black p-0' : 'bg-white border-slate-100 p-3 md:p-5'}`}>
               <img 
                 src={`/images/amc/${logo}`} 
                 alt={logo.split('.')[0].replace(/%20/g, ' ')} 
-                className={`max-w-full max-h-full object-contain transition-all duration-300 ${logo.includes('imgi_68') ? '' : 'mix-blend-multiply'} ${logo.toLowerCase().includes('tata') ? 'scale-[1.6]' : ''}`} 
+                className={`max-w-full max-h-full transition-all duration-300 ${logo.toLowerCase().includes('kotak') ? 'object-contain scale-[1.8]' : 'object-contain mix-blend-multiply'} ${logo.toLowerCase().includes('tata') ? 'scale-[1.6]' : ''}`} 
               />
             </div>
           ))}
@@ -105,11 +104,11 @@ export function AssociatedAMCs() {
         {/* Row 3 (Moving Left - Slightly Slower) */}
         <div className="flex w-max animate-marquee-left-slow gap-4 md:gap-8 px-4">
           {extendedRow3.map((logo, idx) => (
-            <div key={`r3-${idx}`} className={`w-[120px] md:w-[220px] h-[60px] md:h-[90px] shrink-0 border rounded-2xl flex items-center justify-center p-3 md:p-5 shadow-sm hover:shadow-md transition-all cursor-pointer group hover:-translate-y-1 ${logo.includes('imgi_68') ? 'bg-slate-800 border-slate-700' : 'bg-white border-slate-100'}`}>
+            <div key={`r3-${idx}`} className={`w-[120px] md:w-[220px] h-[60px] md:h-[90px] shrink-0 border rounded-2xl flex items-center justify-center shadow-sm hover:shadow-md transition-all cursor-pointer group hover:-translate-y-1 overflow-hidden ${logo.toLowerCase().includes('kotak') ? 'bg-black border-black p-0' : 'bg-white border-slate-100 p-3 md:p-5'}`}>
               <img 
                 src={`/images/amc/${logo}`} 
                 alt={logo.split('.')[0].replace(/%20/g, ' ')} 
-                className={`max-w-full max-h-full object-contain transition-all duration-300 ${logo.includes('imgi_68') ? '' : 'mix-blend-multiply'} ${logo.toLowerCase().includes('tata') ? 'scale-[1.6]' : ''}`} 
+                className={`max-w-full max-h-full transition-all duration-300 ${logo.toLowerCase().includes('kotak') ? 'object-contain scale-[1.8]' : 'object-contain mix-blend-multiply'} ${logo.toLowerCase().includes('tata') ? 'scale-[1.6]' : ''}`} 
               />
             </div>
           ))}

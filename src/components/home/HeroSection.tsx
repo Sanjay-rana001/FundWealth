@@ -75,9 +75,6 @@ export function HeroSection() {
             <Button variant="primary" className="w-full sm:w-auto text-base py-4 px-8 shadow-lg shadow-primary-500/20 hover:-translate-y-1 transition-transform">
               Start Your Journey
             </Button>
-            <Button variant="outline" className="w-full sm:w-auto text-base py-4 px-8 bg-white/50 backdrop-blur-sm">
-              Explore Portfolios
-            </Button>
           </div>
         </div>
 
